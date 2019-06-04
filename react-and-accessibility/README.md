@@ -45,6 +45,7 @@
 -   [ ] Basic accessibility auditing
     -   [ ] aXe
     -   [ ] Lighthouse
+        -   It's possible to write a totally inaccessible site that receives a perfect score [_Building the most inaccessible site possible with a perfect Lighthouse score_ by Manuel Matuzovic](https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/)
     -   [ ] Manual testing
 -   [ ] Tools
     -   `react-axe`
