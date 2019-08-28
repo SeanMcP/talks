@@ -10,8 +10,15 @@
 
 **Outline**:
 
--   [ ] Title
--   [ ] About
+-   [x] Title
+-   [x] About Me
+-   [x] Overview
+-   [x] Objective
+    - What is accessibility
+    - Why it's necessary
+    - Four domains of accessibility
+    - Tools and Resources
+-   [x] Assumptions
 -   [ ] What is accessibility?
     -   [x] Overview
     -   [ ] Assumptions
