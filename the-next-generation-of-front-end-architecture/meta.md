@@ -38,3 +38,5 @@ technical information. A rough outline:
 
 - https://www.webdesignmuseum.org/web-design-history History
 - https://www.codeinwp.com/blog/history-of-website-builders/ History
+- https://www.patterns.dev/posts/rendering-patterns
+- https://jasonformat.com/islands-architecture/
