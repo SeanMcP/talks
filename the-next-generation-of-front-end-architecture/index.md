@@ -165,6 +165,7 @@ Example: Node.js and React
 - Cons
   - Harder to build
   - Harder to host
+  - Potential time to interactive (TTI) issues
 
 ---
 
@@ -227,6 +228,17 @@ Example: Node.js and React
 ---
 
 # Islands architecture
+
+- Render HTML pages at build time or on the server
+- Inject placeholders for dynamic regions
+- Hydrate interactive "islands" on the client
+  - Progressive hydration
+- A type of progressive enhancement
+- The main idea: pre-rendering the HTML for islands
+- Astro was built with this architecture in mind
+
+- [Miller, Jason. (2020). _Islands architecture_](https://jasonformat.com/islands-architecture/)
+- [Patterns.dev. (n.d.). _Islands architecture_](https://www.patterns.dev/posts/islands-architecture)
 
 ---
 
