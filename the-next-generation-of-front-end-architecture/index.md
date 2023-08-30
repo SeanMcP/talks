@@ -117,8 +117,6 @@ Sean McPherson Software Engineer, Khan Academy
 
 # JAMstack
 
-<!-- Not sure if this is worth keeping -->
-
 - Squishy term invented by Netlify
   - JAM: JavaScript, APIs, Markup
 
@@ -166,6 +164,7 @@ Example: Node.js and React
   - Better performance
 - Cons
   - Harder to build
+  - Harder to host
 
 ---
 
@@ -227,6 +226,10 @@ Example: Node.js and React
 
 ---
 
+# Islands architecture
+
+---
+
 ## Are SPAs dead?
 
 - No: they remain a useful pattern for highly interactive web applications
@@ -234,3 +237,49 @@ Example: Node.js and React
 ## Should you be building an SPA?
 
 - Probably not
+
+---
+
+# Recommendations
+
+- All decisions are trade-offs
+- Assess your needs
+- Evaluate each architecture's strengths/weaknesses
+
+---
+
+# Recommendation: Static sites
+
+- Content-driven sites
+  - _e.g._ blogs, documentation, e-commerce
+- Little/no dynamic content
+- Uniform experience for all users
+- Can be cached on a CDN
+
+---
+
+# Recommendation: Server-rendered sites
+
+- Content-driven sites
+  - _e.g._ blogs, documentation, e-commerce
+- Different experiences for different users
+  - _e.g._ logged-in vs. logged-out
+
+---
+
+# Recommendation: Single-page applications
+
+- Highly interactive web applications
+  - _e.g._ Google Docs, Trello, Figma, Spotify
+- Elements that follow the user throughout their experience
+  - _e.g._ music player, chat panel
+- URL routing is not meaningful to the user
+- Users expect long login sessions <!-- Why? Look this up. -->
+- Doesn't need to be indexed by search engines
+- Internal application with hardware/connection guarantees
+
+---
+
+# Recommendation: Multi-page applications
+
+---

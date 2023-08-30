@@ -34,6 +34,14 @@ technical information. A rough outline:
 
 ---
 
+Types of architectures:
+- Static sites
+- Server-rendered sites
+- Single-page applications
+- Multi-page applications
+
+---
+
 ## Resources
 
 - https://www.webdesignmuseum.org/web-design-history History
