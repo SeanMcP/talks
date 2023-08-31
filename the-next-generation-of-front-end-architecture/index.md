@@ -6,9 +6,27 @@ Sean McPherson Software Engineer, Khan Academy
 
 # About me
 
-- Software Engineer at Khan Academy
-- Formerly Niche.com (Pittsburgh) and TSYS (Atlanta)
-- Focused on all areas of front-end development
+- Software Engineer
+  - Focused on front-end web development
+- Currently work for Khan Academy
+  - Non-profit that provides free, world-class education for anyone, anywhere
+- Formerly
+  - Niche.com (Pittsburgh)
+  - TSYS (Atlanta)
+  - Classroom teacher
+- Live in Pittsburgh, PA
+
+---
+
+# About this talk
+
+Learn about the next generation of front-end architecture
+
+1. A brief history of serving websites
+2. The rise of single-page applications
+3. Return to multi-page applications
+4. Examples
+5. Recommendations
 
 ---
 
@@ -123,8 +141,8 @@ Sean McPherson Software Engineer, Khan Academy
 > The core principles of pre-rendering, and decoupling, enable sites and
 > applications to be delivered with greater confidence and resilience than ever
 > before.
-
--- [Jamstack.org](https://jamstack.org/what-is-jamstack/)
+>
+> -- [Jamstack.org](https://jamstack.org/what-is-jamstack/)
 
 - Gave rise to the next generation of meta-frameworks
   - Next, Gatsby, Nuxt, etc.
@@ -132,6 +150,11 @@ Sean McPherson Software Engineer, Khan Academy
 ---
 
 # Server-side rendering (SSR)
+
+> To really take your app to the next level, you'll want to server render your
+> app.
+>
+> -- [Kent C. Dodds](https://kentcdodds.com/blog/remix-the-yang-to-react-s-yin)
 
 Example: Node.js and React
 
