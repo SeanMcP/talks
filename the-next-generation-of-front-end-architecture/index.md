@@ -20,13 +20,15 @@ Sean McPherson Software Engineer, Khan Academy
 
 # About this talk
 
-Learn about the next generation of front-end architecture
+Learn about modern patterns for front-end architecture
 
-1. A brief history of serving websites
+1. A brief history of front-end architectures
 2. The rise of single-page applications
 3. Return to multi-page applications
 4. Examples
 5. Recommendations
+
+<!-- TODO: Consider explaining two slide "tracks" -->
 
 ---
 
@@ -47,42 +49,81 @@ Learn about the next generation of front-end architecture
 
 ---
 
-# A brief history of serving websites
+# A brief history of front-end architectures
 
-<!-- This is the part that I feel least qualified to discuss, so finding a resource to cite would be really helpful -->
+We only have time for a brief tour of the past 30 years of web development, but
+I want to focus on a few patterns that are helpful when understanding the
+current front-end landscape.
 
-## The beginning
+---
 
-- Files on a computer
-- Accessible by IP address
-- Updated by FTP
-- Still a thing!
+# History: The beginning
 
-## Rise of servers
+- Static HTML files on a computer
+- Accessed on the internet via an IP address
+- Edited directly or updated by FTP or SSH
+- (Still a thing)
+
+<!-- When you sign up for hosting with one of the big companies like Host Gator, they give you access to a computer where you can store your static files -->
+
+---
+
+# History: Rise of servers
 
 - Application running on a computer
-- Server receives requests, sends HTML
-- Client-side JavaScript (jQuery) for interactivity
-- PHP: WordPress, Drupal
-- Ruby: Rails
-- Python: Django
-- Still a thing!
+- Server receives network requests and response with some HTML
+- Rely on HTML forms for user input
+- Client-side JavaScript for interactivity
+  - jQuery plugins for UI components on sites
+- Languages and frameworks:
+  - PHP: WordPress, Drupal
+  - Ruby: Rails
+  - Python: Django
+- (Still a thing)
 
-## App-like experiences
+---
 
+# History: App-like experiences
+
+- Highly interactive experiences
+- Trying to recreate experience of native applications
+  <!-- iPhone released in 2007 -->
+  - Desktop and then later mobile
 - Macromedia/Adobe Flash
-- Java applets
-- Highly interactive
-- Poor accessibility
+  - Single HTML file
+  - Loads SWF file with Flash Player
+- Feel immersive
+
+<!-- TODO: Some kind of transition where you mention the cons -->
+
+---
+
+# History: The end of Flash
+
+- Flash, like Icarus, flew too close to the sun
+- Beautiful and magical
+  <!-- I'm sure many of your remember the joy of Flash games -->
+- Security nightmare
+  <!-- Popular vector for hackers during it's hayday -->
+- Famously "killed" by Steve Jobs and the iPhone
+  > Flash is a spaghetti-ball piece of technology that has lousy performance and
+  > really bad security problems.
+  >
+  > -- Steve Jobs
+- But he couldn't kill the dream of app-like experiences on the web
 
 ---
 
 # Rise of single-page applications
 
+<!-- First acronym of the day -->
+
 - SPAs
 - Applications that are entirely client-side rendered
 - Influenced by native mobile apps
-- Provide app-like experiences on the web
+<!-- Unlike something like Flash that depended on plugins -->
+- Provide app-like experiences with web technologies
+  - HTML, CSS, and a lot of JavaScript
 - Coincided with the rise of front-end frameworks
   - Angular, Ember, React, etc.
 
@@ -97,7 +138,7 @@ Learn about the next generation of front-end architecture
 - JavaScript makes additional requests to APIs
 - JavaScript handles all interactions/updates
 - External requests to save data
-- `create-react-app`, `react-router-dom`
+- In React-world: `create-react-app`, `react-router-dom`
 
 ---
 
@@ -316,5 +357,11 @@ Example: Node.js and React
 ---
 
 # Recommendation: Multi-page applications
+
+- The default pattern for web applications
+- Server-side rendered content
+  - Good performance for users
+  - Good SEO
+- Client-side navigation when valuable
 
 ---

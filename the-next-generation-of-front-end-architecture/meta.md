@@ -48,3 +48,15 @@ Types of architectures:
 - https://www.codeinwp.com/blog/history-of-website-builders/ History
 - https://www.patterns.dev/posts/rendering-patterns
 - https://jasonformat.com/islands-architecture/
+
+---
+
+## Timeline
+
+- 9/2 S: Today
+- 9/4 M: 
+- 9/5 T:
+- 9/6 W: Send to reviewers
+- 9/7 R: 
+- 9/8 F: 
+- 9/9 S: Submission
