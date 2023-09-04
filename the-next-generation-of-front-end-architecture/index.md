@@ -28,24 +28,25 @@ Learn about modern patterns for front-end architecture
 4. Examples
 5. Recommendations
 
-<!-- TODO: Consider explaining two slide "tracks" -->
+---
+
+# First: An apology
+
+- I came up with the name for this talk without thinking of prior art
+- If you came here expecting allusions and references to Star Wars: The Next Generation:
+  - I apologize; there are none
+- Hopefully the content of the talk will be interesting enough to stick around
 
 ---
 
-# Glossary
+# Definitions
 
-<!-- How would I present this? -->
+**Patterns**: general and reusable solutions to commonly occurring problem
 
-- CSR: Client-side rendering
-- CSN: Client-side navigation
-- DX: Developer experience
-- FCP: First contentful paint
-- MPA: Multi-page application
-- SEO: Search engine optimization
-- SPA: Single-page application
-- SSG: Static-site generation
-- SSR: Server-side rendering
-- UX: User experience
+**Architecture**: design decisions related to overall system structure and behavior
+- Comprises multiple patterns
+
+[SEI CMU. (n.d.) "Software Architecture".](https://www.sei.cmu.edu/our-work/software-architecture/)
 
 ---
 
@@ -62,6 +63,7 @@ current front-end landscape.
 - Static HTML files on a computer
 - Accessed on the internet via an IP address
 - Edited directly or updated by FTP or SSH
+- Architecture: Static sites
 - (Still a thing)
 
 <!-- When you sign up for hosting with one of the big companies like Host Gator, they give you access to a computer where you can store your static files -->
@@ -79,6 +81,7 @@ current front-end landscape.
   - PHP: WordPress, Drupal
   - Ruby: Rails
   - Python: Django
+- Architecture: Server-rendered sites
 - (Still a thing)
 
 ---
@@ -93,6 +96,8 @@ current front-end landscape.
   - Single HTML file
   - Loads SWF file with Flash Player
 - Feel immersive
+- Architecture: Single-page applications (SPAs)
+  - Patterns: Client-side rendering, client-side navigation
 
 <!-- TODO: Some kind of transition where you mention the cons -->
 
@@ -118,7 +123,6 @@ current front-end landscape.
 
 <!-- First acronym of the day -->
 
-- SPAs
 - Applications that are entirely client-side rendered
 - Influenced by native mobile apps
 <!-- Unlike something like Flash that depended on plugins -->
@@ -129,7 +133,7 @@ current front-end landscape.
 
 ---
 
-# Client-side rendering (CSR)
+# Pattern: Client-side rendering (CSR)
 
 - Almost empty HTML file
 - JavaScript bundle
@@ -139,6 +143,10 @@ current front-end landscape.
 - JavaScript handles all interactions/updates
 - External requests to save data
 - In React-world: `create-react-app`, `react-router-dom`
+
+---
+
+# Pattern: Client-side navigation (CSN)
 
 ---
 
@@ -190,7 +198,7 @@ current front-end landscape.
 
 ---
 
-# Server-side rendering (SSR)
+# Pattern: Server-side rendering (SSR)
 
 > To really take your app to the next level, you'll want to server render your
 > app.
@@ -365,3 +373,18 @@ Example: Node.js and React
 - Client-side navigation when valuable
 
 ---
+
+# Glossary
+
+<!-- How would I present this? -->
+
+- CSR: Client-side rendering
+- CSN: Client-side navigation
+- DX: Developer experience
+- FCP: First contentful paint
+- MPA: Multi-page application
+- SEO: Search engine optimization
+- SPA: Single-page application
+- SSG: Static-site generation
+- SSR: Server-side rendering
+- UX: User experience
