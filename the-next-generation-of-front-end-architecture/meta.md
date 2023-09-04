@@ -61,18 +61,22 @@ Outline
 - Arch: static sites
 - Arch: server-rendered sites
     - Pattern: server-side rendering
-    - Maybe pattern: plugins
+    - (Maybe) Pattern: plugins
+    - Example: Wordpress
 - Arch: single-page applications
     - Pattern: client-side rendering
     - Pattern: client-side navigation
+    - Example: `create-react-app` with `react-router-dom`
 - Arch: static sites (revisted)
     - Pattern: static-site generation
     - Pattern: islands
+    - Example: Gatsby and Astro (other: Jekyll, Hugo, Eleventy)
 - Arch: multi-page applications
     - Pattern: server-side rendering *with* client-side hydration
     - Pattern: hybrid rendering
     - Pattern: hybrid routing
     - Pattern: islands [x]
+    - Example: Next and Remix (other: SvelteKit, Nuxt)
 
 ---
 
@@ -89,8 +93,11 @@ Outline
 
 - ~~9/2 S: Today~~
 - 9/4 M: 
+  - [ ] Ask two other reviewers
 - 9/5 T:
-- 9/6 W: Send to reviewers
+- 9/6 W:
+  - [ ] Send to reviewers
 - 9/7 R: 
 - 9/8 F: 
-- 9/9 S: Submission
+- 9/9 S:
+  - [ ] Submission
