@@ -34,11 +34,45 @@ technical information. A rough outline:
 
 ---
 
-Types of architectures:
+Architectures:
 - Static sites
 - Server-rendered sites
 - Single-page applications
 - Multi-page applications
+- Islands?
+
+Patterns:
+- SSG
+- SSR
+- CSR
+- CSN
+- Hybrid routing
+- Hybrid rendering
+- Islands?
+- Plugins?
+
+---
+
+> Explore different front-end architecture in a roughly chronological order
+
+> Build our library of architectures and patterns as we go
+
+Outline
+- Arch: static sites
+- Arch: server-rendered sites
+    - Pattern: server-side rendering
+    - Maybe pattern: plugins
+- Arch: single-page applications
+    - Pattern: client-side rendering
+    - Pattern: client-side navigation
+- Arch: static sites (revisted)
+    - Pattern: static-site generation
+    - Pattern: islands
+- Arch: multi-page applications
+    - Pattern: server-side rendering *with* client-side hydration
+    - Pattern: hybrid rendering
+    - Pattern: hybrid routing
+    - Pattern: islands [x]
 
 ---
 
@@ -53,7 +87,7 @@ Types of architectures:
 
 ## Timeline
 
-- 9/2 S: Today
+- ~~9/2 S: Today~~
 - 9/4 M: 
 - 9/5 T:
 - 9/6 W: Send to reviewers
