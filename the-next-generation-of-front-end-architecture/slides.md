@@ -102,7 +102,7 @@ Replaced by islands and web components
 
 ---
 
-# Architecture: Single-page applications (SPAs), version 1.0
+# Architecture: Early single-page applications (SPAs)
 
 - Highly interactive and immersive experiences
 - Try to recreate native applications on the web
@@ -120,12 +120,74 @@ But they introduced some lasting patterns...
 
 ---
 
-# Pattern: Client-side rendering (CSR)
+# Pattern: Client-side rendering
 
 - Status: Solid
 
 ---
 
-# Pattern: Client-side navigation (CSN)
+# Pattern: Client-side navigation
 
 - Status: Solid
+
+---
+
+# Architecture: Modern SPAs
+
+- Same goals of early SPAs
+- Powered by front-end JavaScript frameworks
+    - Angular, Ember, React, Vue, Svelte
+- Provide app-like experiences with web technologies
+    - HTML, CSS, and a lot of JavaScript
+- Example: `create-react-app` and `react-router-dom`
+
+---
+
+# Architecture: Multi-page applications (MPAs)
+
+- Combining patterns from server-rendered sites and SPAs
+- Server-rendered pages
+- Client-side navigation
+- Powered by metaframeworks
+- Example: Next, Remix
+    - Nuxt (Vue), SvelteKit
+
+---
+
+# Pattern: SSR with client-side hydration
+
+---
+
+# Pattern: Hybrid navigation
+
+- Support client- and server-side navigation
+- Performance benefits on first load
+- User experience benefits on navigation
+
+---
+
+# Pattern: Hybrid rendering
+
+- Configurable rendering for each route
+- Statically-generated pages
+- Server-rendered pages
+
+---
+
+# Pattern: Islands
+
+- Successor to Plugins pattern
+
+---
+
+# Architecture: Modern static sites
+
+- Same features of early static sites
+- Use mordern tooling to generate HTML
+- 
+
+---
+
+# Pattern: Static-site generation (SSG)
+
+---

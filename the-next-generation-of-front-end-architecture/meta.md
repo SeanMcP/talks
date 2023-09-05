@@ -67,16 +67,16 @@ Outline
     - Pattern: client-side rendering
     - Pattern: client-side navigation
     - Example: `create-react-app` with `react-router-dom`
-- Arch: static sites (revisted)
-    - Pattern: static-site generation
-    - Pattern: islands
-    - Example: Gatsby and Astro (other: Jekyll, Hugo, Eleventy)
 - Arch: multi-page applications
     - Pattern: server-side rendering *with* client-side hydration
     - Pattern: hybrid rendering
     - Pattern: hybrid routing
-    - Pattern: islands [x]
+    - Pattern: islands
     - Example: Next and Remix (other: SvelteKit, Nuxt)
+- Arch: static sites (revisted)
+    - Pattern: static-site generation
+    - Pattern: islands [x]
+    - Example: Gatsby and Astro (other: Jekyll, Hugo, Eleventy)
 
 ---
 
@@ -92,7 +92,7 @@ Outline
 ## Timeline
 
 - ~~9/2 S: Today~~
-- 9/4 M: 
+- ~~9/4 M:~~
   - [ ] Ask two other reviewers
 - 9/5 T:
 - 9/6 W:
