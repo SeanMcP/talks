@@ -122,12 +122,19 @@ But they introduced some lasting patterns...
 
 # Pattern: Client-side rendering
 
+- Single root node in an empty HTML page
+- Large bundle that builds site on node when executed
+- Typically created with a frameworks
+- Client-side code handles all updates
 - Status: Solid
 
 ---
 
 # Pattern: Client-side navigation
 
+- All "navigation" occurs within a single HTML page
+- Sometimes mocks URL changes with History API
+- Client-side code determines what views to render
 - Status: Solid
 
 ---
@@ -139,6 +146,7 @@ But they introduced some lasting patterns...
     - Angular, Ember, React, Vue, Svelte
 - Provide app-like experiences with web technologies
     - HTML, CSS, and a lot of JavaScript
+- Maturation of previous era of SPAs
 - Example: `create-react-app` and `react-router-dom`
 
 ---
@@ -156,38 +164,72 @@ But they introduced some lasting patterns...
 
 # Pattern: SSR with client-side hydration
 
+- Server renders HTML with JavaScript framework
+- Browser paints with initial response from server
+- Client fetches/executes JavaScript bundle
+- Client-side JavaScript adds interactivity
+- Status: Solid
+
 ---
 
 # Pattern: Hybrid navigation
 
-- Support client- and server-side navigation
+- Support client- & server-side navigation
+- Page load/refresh makes server request
+- User interaction trigger client-side navigation
 - Performance benefits on first load
 - User experience benefits on navigation
+- Status: Developing
 
 ---
 
 # Pattern: Hybrid rendering
 
 - Configurable rendering for each route
-- Statically-generated pages
-- Server-rendered pages
+- Statically-generated pages for static content
+- Server-rendered pages for interactivity, personalization
+- Status: Developing
+
+<!--
+- Next and Astro support this for React sites
+-->
 
 ---
 
 # Pattern: Islands
 
+- Also called "Islands Architecture"
+- Small, focused chunks of interactivity
+- Pre-/server-rendered markup is progressively enhanced with client-side JavaScript
+- Scripts can be requested and run independently
+    - Pattern: Progressive hydration
 - Successor to Plugins pattern
+- Status: Developing
+
+<!--
+- Astro is a framework designed for islands
+- Enables you to create sites with any JavaScript framework
+- Provides client directives to components that allow you to configure when an island hydrates
+-->
 
 ---
 
 # Architecture: Modern static sites
 
 - Same features of early static sites
-- Use mordern tooling to generate HTML
-- 
+- Use modern tooling to generate HTML pages
+- Use islands pattern for interactivity
+- Pages are cached on global CDNs
+- Examples: Next, Astro, SvelteKit, Nuxt
 
 ---
 
 # Pattern: Static-site generation (SSG)
+
+- Automating the process of creating HTML pages
+- Support for templates
+- File system for directory structures
+- Some handle bundling resources
+- Status: Solid
 
 ---
