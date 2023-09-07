@@ -1,0 +1,16 @@
+{
+  "name": "the-next-generation-of-front-end-architecture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "slidev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slidev/cli": "^0.43.0",
+    "@slidev/theme-default": "^0.21.2"
+  }
+}
