@@ -73,7 +73,7 @@ Learn about modern front-end architectures and their patterns
 - Examples: Wordpress (PHP), Rails (Ruby), Django (Python), Express (Node.js)
 
 <!--
-- This next era was the begining of web-based "applications"
+- This next era was the beginning of web-based "applications"
 - Brought truly dynamic content to the web
 - Server-rendered sites used two main patterns...
 -->
@@ -126,7 +126,7 @@ Learn about modern front-end architectures and their patterns
 
 - Highly interactive and immersive experiences
 - Try to recreate native applications on the web
-    - Initally desktop programs
+    - Initially desktop programs
     - Later mobile apps
 - Needed to recreate browser functionality like routing
 - Required browser plugins to run applications
