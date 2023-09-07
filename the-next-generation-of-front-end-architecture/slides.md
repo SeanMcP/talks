@@ -24,7 +24,7 @@ Learn about modern front-end architectures and their patterns
 
 1. Architectures
 2. Patterns
-3. Trends & Examples
+3. Examples & Tradeoffs
 4. Recommendations
 
 ---
@@ -43,7 +43,7 @@ Learn about modern front-end architectures and their patterns
 # Architectures
 
 <!--
-We're going to proceed through these in roughly chronological order
+- We're going to proceed through these in roughly chronological order
 -->
 
 ---
@@ -55,11 +55,10 @@ We're going to proceed through these in roughly chronological order
 - Edited directed or updated by FTP/SSH
 
 <!--
-The first architecture in web development was static sites
-These were files stored in a computer somewhere that you could access on the internet
-When you sign up for hosting with one of the big companies, they give you access to a computer where you can store your static files
-There aren't any patterns for us to discuss here, beyond using the main web technologies: HTML, CSS, and JS
-Static 
+- The first architecture in web development was static
+- All sites were just files stored on a computer somewhere that you could access on the internet
+- When you sign up for hosting with one of the big companies, they give you access to a computer where you can store your static files
+- There aren't any patterns for us to discuss here, beyond using the main web technologies: HTML, CSS, and JS
 -->
 
 ---
@@ -73,6 +72,12 @@ Static
     - jQuery plugins for UI components
 - Examples: Wordpress (PHP), Rails (Ruby), Django (Python), Express (Node.js)
 
+<!--
+- This next era was the begining of web-based "applications"
+- Brought truly dynamic content to the web
+- Server-rendered sites used two main patterns...
+-->
+
 ---
 
 # Pattern: Server-side rendering (SSR)
@@ -83,11 +88,15 @@ Static
 - Secrets are kept on the server
 - Status: Solid
 
+<!--
+- Each pattern we discuss will have a status at the end
+- "Solid" means that you could build your business on their pattern without worrying
+- As we will see, other statues inspire much less confidence...
+-->
+
 ---
 
 # Pattern: Plugins
-
-<!-- TODO: Research this more -->
 
 - Isolated scripts that bring specific interactivity to a site
 - JavaScript code that is paired with a DOM node
@@ -96,9 +105,20 @@ Static
 - Status: Shaky
 
 <!--
-There are some contexts where plugins might be the best pattern
-Replaced by islands and web components
+- The status here means that you could use it today, but don't expect it to last long
+- There are some contexts where plugins might be the best pattern
+- Replaced by web components and islands (which we will discuss later)
+- The server-rendered site architecture has some tradeoffs...
 -->
+
+---
+
+# Tradeoffs: Server-rendered sites
+
+- Full-page loads feel slow
+- Server issues may increase time to first byte (TTFB)
+    - Traffic surges
+    - Global user base
 
 ---
 
@@ -113,9 +133,9 @@ Replaced by islands and web components
 - Examples: Macromedia Flash, Microsoft Silverlight
 
 <!--
-Ultimately these technologies failed to revolutionize the web
-Steve Jobs famously killed Flash by not supporting it in the iPhone
-But they introduced some lasting patterns...
+- This was an exciting time to build applications
+- Magic of creating applications, games, and sites with Flash
+- Introduced a few important patterns...
 -->
 
 ---
@@ -139,6 +159,22 @@ But they introduced some lasting patterns...
 
 ---
 
+# Tradeoffs: Early SPAs
+
+- Depended on plugins
+    > To view this content, please install Microsoft Silverlight
+- Not accessible (see [WCAG "Robust"](https://www.w3.org/WAI/fundamentals/accessibility-principles/#robust))
+- Poor performance
+- Poor security
+
+<!--
+- Ultimately these technologies failed to revolutionize the web
+- Steve Jobs famously killed Flash by not supporting it in the iPhone
+- The patterns they introduced became the foundation behind...
+-->
+
+---
+
 # Architecture: Modern SPAs
 
 - Same goals of early SPAs
@@ -148,6 +184,21 @@ But they introduced some lasting patterns...
     - HTML, CSS, and a lot of JavaScript
 - Maturation of previous era of SPAs
 - Example: `create-react-app` and `react-router-dom`
+
+---
+
+# Tradeoffs: Modern SPAs
+
+- Long initial loads
+- Bad SEO
+- Network request waterfalls
+- Too easy to make inaccessible
+
+<!--
+- Once the SPA was up and running, it was great
+- The industry needed a way to get the benefits of SPAs without those tradeoffs
+- Enter...
+-->
 
 ---
 
@@ -218,9 +269,10 @@ But they introduced some lasting patterns...
 
 - Same features of early static sites
 - Use modern tooling to generate HTML pages
+    - Typically file-system based page generation
 - Use islands pattern for interactivity
 - Pages are cached on global CDNs
-- Examples: Next, Astro, SvelteKit, Nuxt
+- Examples: Astro, Next SvelteKit, Nuxt
 
 ---
 
@@ -233,3 +285,146 @@ But they introduced some lasting patterns...
 - Status: Solid
 
 ---
+
+# Recommendations
+
+- All decisions are trade-offs
+- Assess your needs
+- Compare to each architecture's strengths & weaknesses
+
+---
+
+# Recommendation: Static sites
+
+- Content focus
+    - _e.g._ blogs, documentation
+- SEO
+- Little to no dynamic content
+- Uniform experience for all users
+- Easily cached on a CDN
+- Patterns: static-site generation, islands
+- Tools: Astro, Hugo, Eleventy
+
+---
+
+# Recommendation: Server-rendered sites
+
+- Content focus
+    - _e.g._ e-commerce, simple dashboards
+- SEO
+- Different experience for different users
+    - _e.g._ localization, logged-in/-out
+- Patterns: server-side rendering, islands
+- Tools: Wordpress, your favorite language's framework
+
+---
+
+# Recommendation: Single-page applications
+
+- Highly interactive web applications
+    - _e.g._ Google Docs, Figma
+- Elements that follow the user throughout their experience
+    - _e.g._ music player, chat panel
+- URL routing is not meaningful to user
+- Long sessions
+- SEO doesn't matter
+- Internal application with hardware & connection guarantees
+- Patterns: client-side rendering, client-side navigation
+- Tools: Vite with your preferred front-end framework
+
+---
+
+# Recommendation: Multi-page applications
+
+- The new default pattern for web applications
+- Server-side rendered content
+    - Good performance for users
+    - Good SEO
+- Client-side navigation when valuable
+    - Improved user experience
+- Pre-rendered routes for static content
+- Patterns: hybrid rendering, hybrid routing, islands
+- Tools: Next, Remix, SveltKit, Nuxt
+
+<!--
+- But don't just take my word for it...
+-->
+
+---
+
+# Meta frameworks are the future
+
+> If you want to build a new app or a new website fully with React, we recommend
+> picking one of the React-powered frameworks popular in the community.
+> Frameworks provide features that most apps and sites eventually need,
+> including routing, data fetching, and generating HTML.
+
+-- [React docs](https://react.dev/learn/start-a-new-react-project)
+
+> We recommend using SvelteKit
+
+-- [Svelte docs](https://svelte.dev/docs/introduction#start-a-new-project)
+
+> We highly recommend giving [Nuxt] a try
+
+-- [Vue docs](https://vuejs.org/guide/scaling-up/ssr.html#nuxt)
+
+---
+
+# Personal recommendations
+
+- Astro: one framework for all architectures
+    - Static sites
+    - Server-rendered sites
+    - SPAs
+    - First-class islands support
+- Meta framework: Next or Remix
+- Dark horse: Svelte & SvelteKit
+
+<!--
+- Since this is my talk, I'm going to end with some of my personal picks
+- Astro is a really interesting project that checks almost all of the boxes
+- You could have a single repository that generates static pages, server-renders content, and serves SPAs
+- Bonus: You get to use whatever front-end framework you want... even more than one!
+- Probably don't do that
+- A safer bet might be to pick a meta framework like Next or Remix
+- There are tons of documentation and examples out there for Next
+- A finally, if you're open to options other than React: I highly recommend checking out Svelte
+- SvelteKit has its quirks, but Svelte is my favorite way to author web apps
+- It has a small bundles, fast interactions, and shaves off all of the React's painful edges
+-->
+
+---
+
+# Other patterns to watch
+
+- **View Transitions**: A browser-native way to animate page transitions
+    - Improve experience for static & server-rendered sites
+    - https://caniuse.com/view-transitions
+- **Edge functions**: On-demand servers to handle simple requests
+    - Cheap option to add server-style functionality
+    - Options for persistent data
+- **Super HTML**: Libraries that add interactivity to HTML code
+    - Make adding client-side interactions easier on statically-/server-rendered pages
+    - Examples: htmx, Hotwire, Alpine.js
+- **Web components**: The browser standard for creating reusable interactive elements
+    - Supported by all major browsers: https://caniuse.com/custom-elementsv1
+    - Frameworks to improve authoring experience: lit, Stencil
+
+<!--
+- I chose to focus on the growth in meta frameworks for this talk, but
+- There is a growing movement to make static and server-rendered sites more interactive
+- Here are some patterns that we didn't have time to discuss that are worth keeping an eye on
+-->
+
+---
+
+# Questions?
+
+---
+
+# Special thanks
+
+- Khan Academy for letting me speak here today
+- Emily Janzer, Josh Smith, and Luke Rathbun for reviewing these slides
+- Anne McPherson for giving up her evenings with me this month

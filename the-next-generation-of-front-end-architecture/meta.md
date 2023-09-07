@@ -93,8 +93,8 @@ Outline
 
 - ~~9/2 S: Today~~
 - ~~9/4 M:~~
-  - [ ] Ask two other reviewers
-- 9/5 T:
+  - [x] Ask two other reviewers
+- ~~9/5 T:~~
 - 9/6 W:
   - [ ] Send to reviewers
 - 9/7 R: 
