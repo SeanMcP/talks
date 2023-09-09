@@ -4,7 +4,7 @@ layout: intro
 
 # The Next Generation of<br/>Front-End Architecture
 
-Sean McPherson Software Engineer, Khan Academy
+Sean McPherson, Software Engineer @ Khan Academy
 
 ---
 
@@ -28,22 +28,32 @@ Learn about modern front-end architectures and their patterns
 1. Architectures & Patterns
 2. Examples & Tradeoffs
 3. Recommendations
+4. Questions
+
+<!--
+- We'll look at a five-ish front-end architectures
+- And the patterns that make them work
+- We'll look at examples of each architecture
+- And analyze some of their tradeoffs
+- Finally we'll end with some recommendations for choosing a front-end architecture
+- Before leaving some time for questions at the end
+-->
 
 ---
 
 # Definitions
 
-- **Patterns**: general and reusable solutions to commonly occurring problem
+- **Patterns**: general and reusable solutions to commonly occurring problem 🧱
 
 - **Architecture**: design decisions related to overall system structure and
-  behavior
+  behavior 🏠
   - Comprises multiple patterns
 
 [SEI CMU. (n.d.) "Software Architecture".](https://www.sei.cmu.edu/our-work/software-architecture/)
 
 ---
-
-## layout: center
+layout: center
+---
 
 # Architectures
 
@@ -53,7 +63,7 @@ Learn about modern front-end architectures and their patterns
 
 ---
 
-# Architecture: Static sites
+# 🏠 Architecture: Static sites
 
 - HTML files on a computer
 - Accessed on the internet via an IP address
@@ -67,9 +77,8 @@ Learn about modern front-end architectures and their patterns
 -->
 
 ---
-
-layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
-
+layout: iframe
+url: https://info.cern.ch/hypertext/WWW/TheProject.html
 ---
 
 <!--
@@ -79,7 +88,7 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Architecture: Server-rendered sites
+# 🏠 Architecture: Server-rendered sites
 
 - Applications running on a computer
 - Receive network requests and respond with HTML
@@ -96,8 +105,11 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Pattern: Server-side rendering (SSR)
+# 🧱 Pattern: Server-side rendering
 
+Server-rendered sites
+
+- Abbreviated SSR
 - Server code that renders and returns HTML
 - Server can interface with database
 - Server-to-server requests are faster
@@ -112,7 +124,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Pattern: Plugins
+# 🧱 Pattern: Plugins
+
+Server-rendered sites
 
 - Isolated scripts that bring specific interactivity to a site
 - JavaScript code that is paired with a DOM node
@@ -129,7 +143,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Tradeoffs: Server-rendered sites
+# ⚖️ Tradeoffs
+
+Server-rendered sites
 
 - Full-page loads feel slow
 - Server issues may increase time to first byte (TTFB)
@@ -138,8 +154,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Architecture: Early single-page applications (SPAs)
+# 🏠 Architecture: Early single-page applications
 
+- Abbreviated SPAs
 - Highly interactive and immersive experiences
 - Try to recreate native applications on the web
   - Initially desktop programs
@@ -157,7 +174,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Pattern: Client-side rendering
+# 🧱 Pattern: Client-side rendering
+
+Single-page applications
 
 - Single root node in an empty HTML page
 - Large bundle that builds site on node when executed
@@ -167,7 +186,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Pattern: Client-side navigation
+# 🧱 Pattern: Client-side navigation
+
+Single-page applications
 
 - All "navigation" occurs within a single HTML page
 - Sometimes mocks URL changes with History API
@@ -176,7 +197,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Tradeoffs: Early SPAs
+# ⚖️ Tradeoffs
+
+Early SPAs
 
 - Depended on plugins
   > To view this content, please install Microsoft Silverlight
@@ -193,7 +216,7 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Architecture: Modern SPAs
+# 🏠 Architecture: Modern SPAs
 
 - Same goals of early SPAs
 - Powered by front-end JavaScript frameworks
@@ -205,7 +228,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Tradeoffs: Modern SPAs
+# ⚖️ Tradeoffs
+
+Modern SPAs
 
 - Long initial loads
 - Bad SEO
@@ -220,8 +245,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Architecture: Multi-page applications (MPAs)
+# 🏠 Architecture: Multi-page applications
 
+- Abbreviated MPAs
 - Combining patterns from server-rendered sites and SPAs
 - Server-rendered pages
 - Client-side navigation
@@ -237,7 +263,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Pattern: SSR with client-side hydration
+# 🧱 Pattern: SSR with client-side hydration
+
+Multi-page applications
 
 - Server renders HTML with JavaScript framework
 - Browser paints with initial response from server
@@ -247,7 +275,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Pattern: Hybrid navigation
+# 🧱 Pattern: Hybrid navigation
+
+Multi-page applications
 
 - Support client- & server-side navigation
 - Page load/refresh makes server request
@@ -258,7 +288,9 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Pattern: Hybrid rendering
+# 🧱 Pattern: Hybrid rendering
+
+Multi-page applications
 
 - Configurable rendering for each route
 - Statically-generated pages for static content
@@ -271,14 +303,16 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Pattern: Islands
+# 🧱 Pattern: Islands
+
+Multi-page applications
 
 - Also called "Islands Architecture" (sorry!)
 - Small, focused chunks of interactivity
 - Pre-/server-rendered markup is progressively enhanced with client-side
   JavaScript
 - Scripts can be requested and run independently
-  - Pattern: Progressive hydration
+  - 🧱 Pattern: Progressive hydration
 - Successor to Plugins pattern
 - Current status: Developing
 
@@ -293,7 +327,7 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Architecture: Modern static sites
+# 🏠 Architecture: Modern static sites
 
 - Same features of early static sites
 - Use modern tooling to generate HTML pages
@@ -313,13 +347,49 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 ---
 
-# Pattern: Static-site generation (SSG)
+# 🧱 Pattern: Static-site generation
 
+Modern static sites
+
+- Abbreviated SSG
 - Automating the process of creating HTML pages
 - Support for templates
 - File system for directory structures
 - Some handle bundling resources
 - Current status: Solid
+
+---
+
+# ⚖️ Tradeoffs
+
+Modern static sites
+
+- Limited dynamic content
+- Performance challenge to add significant interactivity
+- Build times/resources for large sites
+
+---
+layout: two-cols
+---
+
+<!-- TODO: Replace this with something else -->
+
+- 🏠 Static sites
+  - 🧱 Static-site generation
+  - 🧱 Islands
+- 🏠 Server-rendered sites
+  - 🧱 Server-side rendering
+  - 🧱 Plugins/Islands
+
+::right::
+- 🏠 Single-page applications
+  - 🧱 Client-side rendering
+  - 🧱 Client-side navigation
+- 🏠 Multi-page applications
+  - 🧱 SSR with client-side hydration
+  - 🧱 Hybrid navigation
+  - 🧱 Hybrid rendering
+  - 🧱 Islands
 
 ---
 

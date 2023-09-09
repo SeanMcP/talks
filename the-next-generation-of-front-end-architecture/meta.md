@@ -101,10 +101,12 @@ Outline
 - ~~9/6 W:~~
   - [x] Send to reviewers
 - ~~9/7 R:~~
-- 9/8 F:
-  - [ ] List feedback
-  - [ ] Make changes
+- ~~9/8 F~~:
+  - [x] List feedback
+  - [x] Make changes
 - 9/9 S:
+  - [ ] Illustrate architectures/patterns
+  - [ ] Find examples for each architecture
   - [ ] Submission
 
 ---
@@ -114,9 +116,9 @@ Outline
 - Luke
   - [x] Add reference to Inertia.js
   - [x] Temper language about Flash
-  - [ ] Pick color/icon for architecture vs pattern
+  - [x] Pick color/icon for architecture vs pattern
 - Emily
-  - [ ] Differentiate between architecture, pattern slides
+  - [x] Differentiate between architecture, pattern slides
   - [ ] Visualizations to connect patterns to architectures
   - [x] Be explicit about "island architecture" being classified a pattern
   - [x] Consider "Current status" instead (it might have been the best option at
