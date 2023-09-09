@@ -4,8 +4,7 @@ layout: intro
 
 # The Next Generation of<br/>Front-End Architecture
 
-Sean McPherson
-Software Engineer, Khan Academy
+Sean McPherson Software Engineer, Khan Academy
 
 ---
 
@@ -26,10 +25,9 @@ Software Engineer, Khan Academy
 
 Learn about modern front-end architectures and their patterns
 
-1. Architectures
-2. Patterns
-3. Examples & Tradeoffs
-4. Recommendations
+1. Architectures & Patterns
+2. Examples & Tradeoffs
+3. Recommendations
 
 ---
 
@@ -37,14 +35,15 @@ Learn about modern front-end architectures and their patterns
 
 - **Patterns**: general and reusable solutions to commonly occurring problem
 
-- **Architecture**: design decisions related to overall system structure and behavior
+- **Architecture**: design decisions related to overall system structure and
+  behavior
   - Comprises multiple patterns
 
 [SEI CMU. (n.d.) "Software Architecture".](https://www.sei.cmu.edu/our-work/software-architecture/)
 
 ---
-layout: center
----
+
+## layout: center
 
 # Architectures
 
@@ -68,8 +67,9 @@ layout: center
 -->
 
 ---
-layout: iframe
-url: https://info.cern.ch/hypertext/WWW/TheProject.html
+
+layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
+
 ---
 
 <!--
@@ -102,12 +102,12 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 - Server can interface with database
 - Server-to-server requests are faster
 - Secrets are kept on the server
-- Status: Solid
+- Current status: Solid
 
 <!--
 - Each pattern we discuss will have a status at the end
 - "Solid" means that you could build your business on their pattern without worrying
-- As we will see, other statues inspire much less confidence...
+- As we will see, other patterns inspire much less confidence...
 -->
 
 ---
@@ -118,7 +118,7 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 - JavaScript code that is paired with a DOM node
 - JS runs on the client to create the UI in the DOM
 - Powered by jQuery and MooTools
-- Status: Shaky
+- Current status: Aging
 
 <!--
 - The status here means that you could use it today, but don't expect it to last long
@@ -149,8 +149,9 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 - Examples: Macromedia Flash, Microsoft Silverlight
 
 <!--
-- This was an exciting time to build applications
-- Magic of creating applications, games, and sites with Flash
+- This was a "Wild West" period for front-end architecture
+- Anything was "possible"; anything goes
+- Gave us some really interesting applications
 - Introduced a few important patterns...
 -->
 
@@ -160,9 +161,9 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 - Single root node in an empty HTML page
 - Large bundle that builds site on node when executed
-- Typically created with a frameworks
+- Typically created with a framework
 - Client-side code handles all updates
-- Status: Solid
+- Current status: Solid
 
 ---
 
@@ -171,7 +172,7 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 - All "navigation" occurs within a single HTML page
 - Sometimes mocks URL changes with History API
 - Client-side code determines what views to render
-- Status: Solid
+- Current status: Solid
 
 ---
 
@@ -179,7 +180,8 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 - Depended on plugins
   > To view this content, please install Microsoft Silverlight
-- Not accessible (see [WCAG "Robust"](https://www.w3.org/WAI/fundamentals/accessibility-principles/#robust))
+- Not accessible (see
+  [WCAG "Robust"](https://www.w3.org/WAI/fundamentals/accessibility-principles/#robust))
 - Poor performance
 - Poor security
 
@@ -223,9 +225,15 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 - Combining patterns from server-rendered sites and SPAs
 - Server-rendered pages
 - Client-side navigation
-- Powered by metaframeworks
+- Powered by meta-frameworks
 - Example: Next, Remix
   - Nuxt (Vue), SvelteKit
+
+<!--
+- These examples are all in JavaScript land
+- But there are meta-frameworks for your preferred language too
+- A friend called out Intertia as an interested option using PHP
+-->
 
 ---
 
@@ -235,7 +243,7 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 - Browser paints with initial response from server
 - Client fetches/executes JavaScript bundle
 - Client-side JavaScript adds interactivity
-- Status: Solid
+- Current status: Solid
 
 ---
 
@@ -246,7 +254,7 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 - User interaction trigger client-side navigation
 - Performance benefits on first load
 - User experience benefits on navigation
-- Status: Developing
+- Current status: Developing
 
 ---
 
@@ -255,7 +263,7 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 - Configurable rendering for each route
 - Statically-generated pages for static content
 - Server-rendered pages for interactivity, personalization
-- Status: Developing
+- Current status: Developing
 
 <!--
 - Next and Astro support this for React sites
@@ -265,15 +273,19 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 # Pattern: Islands
 
-- Also called "Islands Architecture"
+- Also called "Islands Architecture" (sorry!)
 - Small, focused chunks of interactivity
-- Pre-/server-rendered markup is progressively enhanced with client-side JavaScript
+- Pre-/server-rendered markup is progressively enhanced with client-side
+  JavaScript
 - Scripts can be requested and run independently
   - Pattern: Progressive hydration
 - Successor to Plugins pattern
-- Status: Developing
+- Current status: Developing
 
 <!--
+- I'm sorry about the naming confusion here
+- I think the idea of islands better fits as a pattern
+  - Especially because it can be used in multiple architectures
 - Astro is a framework designed for islands
 - Enables you to create sites with any JavaScript framework
 - Provides client directives to components that allow you to configure when an island hydrates
@@ -298,11 +310,11 @@ url: https://info.cern.ch/hypertext/WWW/TheProject.html
 - Support for templates
 - File system for directory structures
 - Some handle bundling resources
-- Status: Solid
+- Current status: Solid
 
 ---
-layout: center
----
+
+## layout: center
 
 # Recommendations
 
@@ -358,13 +370,16 @@ layout: center
 
 # Recommendation: Multi-page applications
 
-- The new default pattern for web applications
-- Server-side rendered content
-  - Good performance for users
+- Diverse content: static, interactive
+  - _e.g._ Khan Academy, Jira
+- Rich logged-out content
+  - Server-side rendered
+  - Pre-rendered routes for static content
+  - Good performance
   - Good SEO
-- Client-side navigation when valuable
-  - Improved user experience
-- Pre-rendered routes for static content
+- Dynamic logged-in experiences
+  - Client-side rendering/navigation
+  - Immersive user experience
 - Patterns: hybrid rendering, hybrid routing, islands
 - Tools: Next, Remix, SveltKit, Nuxt
 
@@ -374,7 +389,7 @@ layout: center
 
 ---
 
-# Meta frameworks are the future
+# Meta-frameworks are the future
 
 > If you want to build a new app or a new website fully with React, we recommend
 > picking one of the React-powered frameworks popular in the community.
@@ -391,6 +406,11 @@ layout: center
 
 -- [Vue docs](https://vuejs.org/guide/scaling-up/ssr.html#nuxt)
 
+<!--
+- If you're in React land, you may have heard a lot about React Server Components and how game-changing they are
+- If you use a meta-framework like Next, you get the benefits of that new pattern out-of-the-box
+-->
+
 ---
 
 # Personal recommendations
@@ -400,16 +420,16 @@ layout: center
   - Server-rendered sites
   - SPAs
   - First-class islands support
-- Meta framework: Next or Remix
+- Meta-framework: Next or Remix
 - Dark horse: Svelte & SvelteKit
 
 <!--
 - Since this is my talk, I'm going to end with some of my personal picks
   - Astro is a really interesting project that checks almost all of the boxes
   - You could have a single repository that generates static pages, server-renders content, and serves SPAs
-  - Bonus: You get to use whatever front-end framework you want... even more than one!
-    - Probably don't do that
-- A safer bet might be to pick a meta framework like Next or Remix
+  - Bonus: You get to use whatever front-end framework you want... even more than one
+    - Probably don't do that!
+- A safer bet might be to pick a meta-framework like Next or Remix
   - There are tons of documentation and examples out there for Next
 - A finally, if you're open to options other than React: I highly recommend checking out Svelte
   - SvelteKit has its quirks, but Svelte is my favorite way to author web apps
@@ -423,25 +443,27 @@ layout: center
 - **View Transitions**: A browser-native way to animate page transitions
   - Improve experience for static & server-rendered sites
   - https://caniuse.com/view-transitions
-- **Edge functions**: On-demand servers to handle simple requests
+- **Serverless/Edge functions**: On-demand servers to handle simple requests
   - Cheap option to add server-style functionality
   - Options for persistent data
 - **Super HTML**: Libraries that add interactivity to HTML code
-  - Make adding client-side interactions easier on statically-/server-rendered pages
+  - Make adding client-side interactions easier on statically-/server-rendered
+    pages
   - Examples: htmx, Hotwire, Alpine.js
-- **Web components**: The browser standard for creating reusable interactive elements
+- **Web components**: The browser standard for creating reusable interactive
+  elements
   - Supported by all major browsers: https://caniuse.com/custom-elementsv1
   - Frameworks to improve authoring experience: lit, Stencil
 
 <!--
-- I chose to focus on the growth in meta frameworks for this talk, but
+- I chose to focus on the growth in meta-frameworks for this talk, but
 - There is a growing movement to make static and server-rendered sites more interactive
 - Here are some patterns that we didn't have time to discuss that are worth keeping an eye on
 -->
 
 ---
-layout: center
----
+
+## layout: center
 
 # Questions?
 
@@ -454,7 +476,7 @@ layout: center
 - Anne McPherson for giving up her evenings with me this month
 
 ---
-layout: end
----
+
+## layout: end
 
 # Thank you!

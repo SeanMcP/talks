@@ -118,15 +118,16 @@ Outline
 - Emily
   - [ ] Differentiate between architecture, pattern slides
   - [ ] Visualizations to connect patterns to architectures
-  - [ ] Be explicit about "island architecture" being classified a pattern
-  - [ ] Consider "Current status" instead (it might have been the best option at
+  - [x] Be explicit about "island architecture" being classified a pattern
+  - [x] Consider "Current status" instead (it might have been the best option at
         the time)
-  - [ ] Reconsider "shaky" status: maybe unpopular or risky or something else
-  - [ ] Clarify outline ("Architectures & Patterns" maybe)
-  - [ ] Typo "a frameworks"
-  - [ ] Make MPA recommendation fit template from other recommendations
-  - [ ] Settle on "meta frameworks" or "meta-frameworks"
-  - [ ] Consider adding React Server Components to pattern
+  - [x] Reconsider "shaky" status: maybe unpopular or risky or something else
+  - [x] Clarify outline ("Architectures & Patterns" maybe)
+  - [x] Typo "a frameworks"
+  - [x] Make MPA recommendation fit template from other recommendations
+  - [x] Settle on "meta frameworks" or "meta-frameworks"
+  - [x] Consider adding React Server Components to pattern
 - Josh
   - [ ] Mention JAMstack
   - [ ] "Statues" typo
+  - [ ] Serverless in addition to "Edge functions"
