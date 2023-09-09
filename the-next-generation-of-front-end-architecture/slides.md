@@ -300,7 +300,16 @@ layout: iframe url: https://info.cern.ch/hypertext/WWW/TheProject.html
   - Typically file-system based page generation
 - Use islands pattern for interactivity
 - Pages are cached on global CDNs
+- Sometimes called "JAMstack"
 - Examples: Astro, Next SvelteKit, Nuxt
+
+<!--
+- JAMstack was a term invented by host Netlify to advertise this architecture (hosted on their platform)
+  > The core principles of pre-rendering, and decoupling, enable sites and
+  > applications to be delivered with greater confidence and resilience than ever
+  > before.
+- Though the term "JAMstack" has faded into history, the architecture is still going strong
+-->
 
 ---
 

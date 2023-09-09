@@ -128,6 +128,6 @@ Outline
   - [x] Settle on "meta frameworks" or "meta-frameworks"
   - [x] Consider adding React Server Components to pattern
 - Josh
-  - [ ] Mention JAMstack
-  - [ ] "Statues" typo
-  - [ ] Serverless in addition to "Edge functions"
+  - [x] Mention JAMstack
+  - [x] "Statues" typo
+  - [x] Serverless in addition to "Edge functions"
