@@ -35,6 +35,7 @@ technical information. A rough outline:
 ---
 
 Architectures:
+
 - Static sites
 - Server-rendered sites
 - Single-page applications
@@ -42,6 +43,7 @@ Architectures:
 - Islands?
 
 Patterns:
+
 - SSG
 - SSR
 - CSR
@@ -58,25 +60,26 @@ Patterns:
 > Build our library of architectures and patterns as we go
 
 Outline
+
 - Arch: static sites
 - Arch: server-rendered sites
-    - Pattern: server-side rendering
-    - (Maybe) Pattern: plugins
-    - Example: Wordpress
+  - Pattern: server-side rendering
+  - (Maybe) Pattern: plugins
+  - Example: Wordpress
 - Arch: single-page applications
-    - Pattern: client-side rendering
-    - Pattern: client-side navigation
-    - Example: `create-react-app` with `react-router-dom`
+  - Pattern: client-side rendering
+  - Pattern: client-side navigation
+  - Example: `create-react-app` with `react-router-dom`
 - Arch: multi-page applications
-    - Pattern: server-side rendering *with* client-side hydration
-    - Pattern: hybrid rendering
-    - Pattern: hybrid routing
-    - Pattern: islands
-    - Example: Next and Remix (other: SvelteKit, Nuxt)
+  - Pattern: server-side rendering _with_ client-side hydration
+  - Pattern: hybrid rendering
+  - Pattern: hybrid routing
+  - Pattern: islands
+  - Example: Next and Remix (other: SvelteKit, Nuxt)
 - Arch: static sites (revisted)
-    - Pattern: static-site generation
-    - Pattern: islands [x]
-    - Example: Gatsby and Astro (other: Jekyll, Hugo, Eleventy)
+  - Pattern: static-site generation
+  - Pattern: islands [x]
+  - Example: Gatsby and Astro (other: Jekyll, Hugo, Eleventy)
 
 ---
 
@@ -95,9 +98,35 @@ Outline
 - ~~9/4 M:~~
   - [x] Ask two other reviewers
 - ~~9/5 T:~~
-- 9/6 W:
-  - [ ] Send to reviewers
-- 9/7 R: 
-- 9/8 F: 
+- ~~9/6 W:~~
+  - [x] Send to reviewers
+- ~~9/7 R:~~
+- 9/8 F:
+  - [ ] List feedback
+  - [ ] Make changes
 - 9/9 S:
   - [ ] Submission
+
+---
+
+## Feedback
+
+- Luke
+  - [x] Add reference to Inertia.js
+  - [x] Temper language about Flash
+  - [ ] Pick color/icon for architecture vs pattern
+- Emily
+  - [ ] Differentiate between architecture, pattern slides
+  - [ ] Visualizations to connect patterns to architectures
+  - [ ] Be explicit about "island architecture" being classified a pattern
+  - [ ] Consider "Current status" instead (it might have been the best option at
+        the time)
+  - [ ] Reconsider "shaky" status: maybe unpopular or risky or something else
+  - [ ] Clarify outline ("Architectures & Patterns" maybe)
+  - [ ] Typo "a frameworks"
+  - [ ] Make MPA recommendation fit template from other recommendations
+  - [ ] Settle on "meta frameworks" or "meta-frameworks"
+  - [ ] Consider adding React Server Components to pattern
+- Josh
+  - [ ] Mention JAMstack
+  - [ ] "Statues" typo
