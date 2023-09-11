@@ -359,6 +359,14 @@ Modern static sites
 - Current status: Solid
 
 ---
+layout: iframe
+url: https://www.twitch.tv
+---
+
+<!--
+-->
+
+---
 
 # ⚖️ Tradeoffs
 
@@ -392,8 +400,8 @@ layout: two-cols
   - 🧱 Islands
 
 ---
-
-## layout: center
+layout: center
+---
 
 # Recommendations
 
@@ -541,8 +549,8 @@ layout: two-cols
 -->
 
 ---
-
-## layout: center
+layout: center
+---
 
 # Questions?
 
@@ -555,7 +563,7 @@ layout: two-cols
 - Anne McPherson for giving up her evenings with me this month
 
 ---
-
-## layout: end
+layout: end
+---
 
 # Thank you!
