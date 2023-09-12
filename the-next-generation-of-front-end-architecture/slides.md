@@ -378,15 +378,6 @@ Modern static sites
 - Current status: Solid
 
 ---
-layout: center
----
-
-![Netlify.com](images/netlify.png)
-
-<!--
--->
-
----
 
 # ⚖️ Tradeoffs
 
@@ -406,27 +397,25 @@ layout: center
 -->
 
 ---
-layout: two-cols
----
 
-<!-- TODO: Replace this with something else -->
+# Architectures & Patterns
 
-- 🏠 Static sites
-  - 🧱 Static-site generation
-  - 🧱 Islands
-- 🏠 Server-rendered sites
-  - 🧱 Server-side rendering
-  - 🧱 Plugins/Islands
+|                        | <TC>Static sites</TC> | <TC>Server-rendered<br/>sites</TC> | <TC>Single-page<br/>apps</TC> | <TC>Multi-page<br/>apps</TC> |
+| ---------------------- | --------------------- | ---------------------------------- | ----------------------------- | ---------------------------- |
+| Static-site generation | <Check/>              |                                    |                               | <Check/>                     |
+| Server-side rendering  |                       | <Check/>                           |                               | <Check/>                     |
+| Islands                | <Check/>              | <Check/>                           |                               | <Check/>                     |
+| Client-side rendering  |                       |                                    | <Check/>                      | <Check/>                     |
+| Client-side navigation |                       |                                    | <Check/>                      | <Check/>                     |
+| Hybrid navigation      |                       |                                    |                               | <Check/>                     |
+| Hybrid rendering       |                       |                                    |                               | <Check/>                     |
 
-::right::
-- 🏠 Single-page applications
-  - 🧱 Client-side rendering
-  - 🧱 Client-side navigation
-- 🏠 Multi-page applications
-  - 🧱 SSR with client-side hydration
-  - 🧱 Hybrid navigation
-  - 🧱 Hybrid rendering
-  - 🧱 Islands
+<!--
+- This is a chart of the architectures we covered and the patterns they use
+- Each have their focus
+- Multi-page apps provide the most options
+- We'll consider this more as we go into...
+-->
 
 ---
 layout: center
