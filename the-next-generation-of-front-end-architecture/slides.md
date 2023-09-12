@@ -77,9 +77,10 @@ layout: center
 -->
 
 ---
-layout: iframe
-url: https://info.cern.ch/hypertext/WWW/TheProject.html
+layout: center
 ---
+
+<img alt="CERN" src="/images/cern.png" />
 
 <!--
 - This is a copy of the first website ever created
@@ -151,6 +152,12 @@ Server-rendered sites
 - Server issues may increase time to first byte (TTFB)
   - Traffic surges
   - Global user base
+
+---
+layout: center
+---
+
+<img alt="MDN" src="/images/mdn.png" />
 
 ---
 
@@ -244,6 +251,12 @@ Modern SPAs
 -->
 
 ---
+layout: center
+---
+
+<img alt="Figma" src="/images/figma.png" />
+
+---
 
 # 🏠 Architecture: Multi-page applications
 
@@ -326,6 +339,12 @@ Multi-page applications
 -->
 
 ---
+layout: center
+---
+
+<img alt="Notion" src="/images/notion.png" />
+
+---
 
 # 🏠 Architecture: Modern static sites
 
@@ -359,9 +378,10 @@ Modern static sites
 - Current status: Solid
 
 ---
-layout: iframe
-url: https://www.twitch.tv
+layout: center
 ---
+
+![Netlify.com](images/netlify.png)
 
 <!--
 -->
@@ -375,6 +395,15 @@ Modern static sites
 - Limited dynamic content
 - Performance challenge to add significant interactivity
 - Build times/resources for large sites
+
+---
+layout: center
+---
+
+<img alt="Microsoft Fluent Design" src="/images/ms-fluent-design.png" />
+
+<!--
+-->
 
 ---
 layout: two-cols
