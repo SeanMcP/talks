@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "export": "slidev export --output seanmcp_next-gen-fe-architecture --dark",
     "start": "slidev"
   },
   "keywords": [],
@@ -12,5 +13,8 @@
   "dependencies": {
     "@slidev/cli": "^0.43.0",
     "@slidev/theme-default": "^0.21.2"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.37.1"
   }
 }
