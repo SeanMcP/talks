@@ -159,6 +159,15 @@ layout: center
 
 <img alt="MDN" src="/images/mdn.png" />
 
+<!--
+- Great example of a server-rendered site
+- Besides the unparalleled quality of the documentation
+- Focused on SEO
+- Full-page loads aren't an issue
+  - You're not primarily navigating the site a lot
+  - Google search, then click the link that fits
+-->
+
 ---
 
 # 🏠 Architecture: Early single-page applications
@@ -190,6 +199,14 @@ Single-page applications
 - Typically created with a framework
 - Client-side code handles all updates
 - Current status: Solid
+
+<!--
+- Start with an empty HTML page and a bundle of client-side code
+- The bundle generates the UI for the website
+- The client-side code handles all updates to the UI
+  - Toggling checkboxes
+  - Opening/closing menus
+-->
 
 ---
 
