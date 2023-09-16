@@ -52,6 +52,8 @@ Sean McPherson, Software Engineer @ Khan Academy
 
 Learn about modern front-end architectures and their patterns
 
+Focus on the JavaScript ecosystem
+
 1. Architectures & Patterns
 2. Examples & Tradeoffs
 3. Recommendations
@@ -59,6 +61,8 @@ Learn about modern front-end architectures and their patterns
 
 <!--
 - Today our goal is to LEARNING_OBJECTIVE
+- I'm going to focus on the JavaScript ecosystem
+  - But the concepts will be applicable in other language environments
 - We're going to look at a five-ish front-end architectures
 - And the patterns that make them work
 - We'll look at examples of each architecture
@@ -85,7 +89,7 @@ Learn about modern front-end architectures and their patterns
 <!--
 - We're going to be talking about patterns and architectures
 - For the purpose of this talk, we're going to use some definitions that are...
-- Lightly edited from Pittsburgh's own Software Engineering Institute at CMU
+  - Lightly edited from PGH's own Software Engineering Institute at CMU
 - Patterns are PATTERN_DEFINITION
 - And architectures as ARCHITECTURE_DEFINITION
 - To help distinguish between the two, I'll use emojis to key you in
@@ -122,15 +126,15 @@ layout: center
 <!--
 - ARCHITECTURE_TYPE
 - All sites were just files stored on a computer somewhere...
-- that you could access on with an internet connection
+  - that you could access on with an internet connection
 - Any updates to the site required changing those static files directly...
 - Or using a protocol like FTP or SSH
 - This might sound ancient to some of you, depending on your experience
 - But this is still a common practice for serving websites today
 - When you sign up for hosting with one of the big companies like Host Gator...
-- They give you access to a computer where you can store your static files
+  - They give you access to a computer where you can store your static files
 - There aren't any patterns for us to discuss here...
-- Beyond using the main web technologies: HTML, CSS, and JS
+  - Beyond using the main web technologies: HTML, CSS, and JS
 - Let's at an example with the first website ever...
 -->
 
@@ -155,6 +159,7 @@ layout: center
 
 <!--
 - The famous Space Jam website
+- Survived the test of time thanks to this simple architecture
 -->
 
 ---
@@ -206,7 +211,8 @@ Server-rendered sites
 - Current status: Aging
 
 <!--
-- The status here means that you could use it today, but don't expect it to last long
+- The status here means that you could use it today...
+  - But don't expect it to last long
 - There are some contexts where plugins might be the best pattern
 - Replaced by web components and islands (which we will discuss later)
 - The server-rendered site architecture has some tradeoffs...
@@ -223,14 +229,22 @@ Server-rendered sites
   - Traffic surges
   - Global user base
 
+<!--
+- Best for short sessions
+- Thanks to network latency, navigation multiple pages in a session...
+  - Is heavier than loading everything up front
+- A great example of a server-rendered site today is...
+-->
+
 ---
 layout: center
 ---
 
 <img alt="MDN" src="/images/mdn.png" />
+<C>[MDN](https://developer.mozilla.org/en-US/)</C>
 
 <!--
-- Great example of a server-rendered site
+- MDN
 - Besides the unparalleled quality of the documentation
 - Focused on SEO
 - Full-page loads aren't an issue
@@ -255,7 +269,12 @@ layout: center
 - This was a "Wild West" period for front-end architecture
 - Anything was "possible"; anything goes
 - Gave us some really interesting applications
-- Introduced a few important patterns...
+  - Spun up a whole industry of Flash games that I remember fondly
+- Just a little tangent: I got started in web development thanks to Flash.
+  - The first sites I built were in Flash or for hosting Flash apps
+  - So forgive me but I look back on this era with some rose-tinted glasses
+- Okay, tangent over!
+- This architecture introduced a few important patterns...
 -->
 
 ---
@@ -276,6 +295,10 @@ Single-page applications
 - The client-side code handles all updates to the UI
   - Toggling checkboxes
   - Opening/closing menus
+- I'm classifying this pattern as "Solid" because of...
+  - Later advancements with other frameworks that we'll discuss
+- FTR: I do **not** recommend building a new SPA with Flash or Silverlight!
+- A pattern that goes hand-in-hand with client-side rendering is...
 -->
 
 ---
@@ -288,6 +311,17 @@ Single-page applications
 - Sometimes mocks URL changes with History API
 - Client-side code determines what views to render
 - Current status: Solid
+
+<!--
+- TITLE
+- This is giving the user the experience of navigating between pages...
+  - Without actually leaving the initial page
+- Since the "navigation" happens entirely on the client...
+  - Transitions can be almost instantaneous
+- They can even be animated to give the user that native experience
+- This pattern is also "Solid" because it is useful today in certain contexts
+- Even though both SPA patterns are solid, there were some notable tradeoffs...
+-->
 
 ---
 
@@ -303,6 +337,13 @@ Early SPAs
 - Poor security
 
 <!--
+- Their reliance on non-web technologies was a major issue
+  - I remember the days of talking to my grandparents over the phone...
+  - And trying to walk through the process of installing Flash or Silverlight
+- A11y: non-web technologies left users with disabilities out in the cold
+  - Screenreaders couldn't access the content
+  - Keyboard users couldn't interact with the apps
+
 - Ultimately these technologies failed to revolutionize the web
 - Steve Jobs famously killed Flash by not supporting it in the iPhone
 - The patterns they introduced became the foundation behind...
@@ -320,6 +361,18 @@ Early SPAs
 - Maturation of previous era of SPAs
 - Example: `create-react-app` and `react-router-dom`
 
+<!--
+- TITLE
+- This is probably what we all think of when we hear "SPA"
+- It built upon the previous iteration of the architecture...
+  - With new frameworks powered by JavaScript
+- These frameworks made it possible to provide an app-like experience...
+  - But with native web technologies
+- This is the era of `create-react-app`, where bootstrapping a new SPA...
+  - Required a single command in the terminal
+  - And the willingness to go fast and break things
+-->
+
 ---
 
 # ⚖️ Tradeoffs
@@ -333,8 +386,14 @@ Modern SPAs
 
 <!--
 - Once the SPA was up and running, it was great
-- The industry needed a way to get the benefits of SPAs without those tradeoffs
-- Enter...
+- But the initial load was a major issue
+- Chaining network requests to load all of the JavaScript and CSS
+- SEO: initially Google's web crawler couldn't index any content on SPAs
+  - That has changed, but long load times result in poor web vitals
+- A11y: it was too easy to make inaccessible
+  - The frameworks didn't provide any guardrails
+  - And the community didn't always have the knowledge to make them accessible
+- All that aside, the SPA architecture is still a great option for...
 -->
 
 ---
@@ -342,6 +401,16 @@ layout: center
 ---
 
 <img alt="Figma" src="/images/figma.png" />
+
+<!--
+- Highly interactive web applications like Figma
+- If you're building something that is closer to an app than a website...
+  - Then SPA is probably the best architecture for your project
+  - Figma is like that: it's basically Adobe Illustrator in the browser
+- But that got folks in the industry thinking:
+- How can we find a way to get the benefits of SPAs without those tradeoffs
+- Enter...
+-->
 
 ---
 
@@ -356,6 +425,7 @@ layout: center
   - Nuxt (Vue), SvelteKit
 
 <!--
+- TITLE
 - These examples are all in JavaScript land
 - But there are meta-frameworks for your preferred language too
 - A friend called out Intertia as an interested option using PHP
