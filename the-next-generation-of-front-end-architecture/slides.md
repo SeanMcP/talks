@@ -1,10 +1,24 @@
 ---
 layout: intro
+title: The Next Generation of<br/>Front-End Architecture
 ---
 
 # The Next Generation of<br/>Front-End Architecture
 
 Sean McPherson, Software Engineer @ Khan Academy
+
+<!--
+- It's great to be speaking here at TechFest
+- This is my first in-person talk after two remote events
+- It feels great to be back in the same room as other people
+- This is _The Next Generation of Front-End Architecture_
+- And before I being, I feel like I need to apologize
+- When I came up with the title of this talk...
+- the connection to the Star Trek series didn't occur to me
+- So if you came here for a Star-Trek-themed talk, I'm sorry to disappoint you
+- But I think you'll enjoy this discussion of modern front-end architecture
+- But before I go any further, let me introduce myself...
+-->
 
 ---
 
@@ -19,6 +33,19 @@ Sean McPherson, Software Engineer @ Khan Academy
   - Classroom teacher
 - Live in Pittsburgh, PA
 
+<!--
+- My name is Sean McPherson
+- and I'm a software engineer mostly in the world of front-end web development
+- I work for Khan Academy, which is...
+- KHAN_ACADEMY_TAGLINE
+- If you're interested in EdTech and especially AI in education, I'd love to chat afterwards
+- Before Khan Academy, I worked for Niche.com which is headquartered here in Pittsburgh
+- And before that I lived in Atlanta and worked for TSYS
+- And once upon a time, I was a classroom teacher
+- I live here in Pittsburgh--just over the river in Wilkinsburg---with my family
+- And I'm excited to be here today talking about front-end architecture...
+-->
+
 ---
 
 # About this talk
@@ -31,12 +58,14 @@ Learn about modern front-end architectures and their patterns
 4. Questions
 
 <!--
-- We'll look at a five-ish front-end architectures
+- Today our goal is to LEARNING_OBJECTIVE
+- We're going to look at a five-ish front-end architectures
 - And the patterns that make them work
 - We'll look at examples of each architecture
 - And analyze some of their tradeoffs
-- Finally we'll end with some recommendations for choosing a front-end architecture
+- Finally we'll end with some recommendations for choosing an architecture
 - Before leaving some time for questions at the end
+- Alrighty, let's kick it off with some terms...
 -->
 
 ---
@@ -50,6 +79,19 @@ Learn about modern front-end architectures and their patterns
   - Comprises multiple patterns
 
 [SEI CMU. (n.d.) "Software Architecture".](https://www.sei.cmu.edu/our-work/software-architecture/)
+
+<!--
+- We're going to be talking about patterns and architectures
+- For the purpose of this talk, we're going to use some definitions that are...
+- Lightly edited from Pittsburgh's own Software Engineering Institute at CMU
+- Patterns are PATTERN_DEFINITION
+- And architectures as ARCHITECTURE_DEFINITION
+- To help distinguish between the two, I'll use emojis to key you in
+  - The brick emoji for patterns
+    - a general and reusable component that is used to build something bigger
+  - And the house emoji for architectures
+    - Something that is made up of multiple patterns, like bricks in a house
+-->
 
 ---
 layout: center
