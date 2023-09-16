@@ -72,6 +72,8 @@ Learn about modern front-end architectures and their patterns
 
 # Definitions
 
+<!-- TODO: Consider switching the order -->
+
 - **Patterns**: general and reusable solutions to commonly occurring problem 🧱
 
 - **Architecture**: design decisions related to overall system structure and
@@ -91,6 +93,8 @@ Learn about modern front-end architectures and their patterns
     - a general and reusable component that is used to build something bigger
   - And the house emoji for architectures
     - Something that is made up of multiple patterns, like bricks in a house
+- Does that sounds reasonable? Yeah? Alright.
+- Let's get started with...
 -->
 
 ---
@@ -100,7 +104,11 @@ layout: center
 # Architectures
 
 <!--
+- BODY
 - We're going to proceed through these in roughly chronological order
+- And this isn't going to be an exhaustive list of all front-end architectures
+- We'll focus on the ones that are still relevant today
+- The first architecture historically and the first one we'll look at is...
 -->
 
 ---
@@ -112,10 +120,18 @@ layout: center
 - Edited directed or updated by FTP/SSH
 
 <!--
-- The first architecture in web development was static
-- All sites were just files stored on a computer somewhere that you could access on the internet
-- When you sign up for hosting with one of the big companies, they give you access to a computer where you can store your static files
-- There aren't any patterns for us to discuss here, beyond using the main web technologies: HTML, CSS, and JS
+- ARCHITECTURE_TYPE
+- All sites were just files stored on a computer somewhere...
+- that you could access on with an internet connection
+- Any updates to the site required changing those static files directly...
+- Or using a protocol like FTP or SSH
+- This might sound ancient to some of you, depending on your experience
+- But this is still a common practice for serving websites today
+- When you sign up for hosting with one of the big companies like Host Gator...
+- They give you access to a computer where you can store your static files
+- There aren't any patterns for us to discuss here...
+- Beyond using the main web technologies: HTML, CSS, and JS
+- Let's at an example with the first website ever...
 -->
 
 ---
@@ -125,8 +141,20 @@ layout: center
 <img alt="CERN" src="/images/cern.png" />
 
 <!--
-- This is a copy of the first website ever created
-- It's a static site
+- The WWW info page from CERN
+- Created by Tim Berners-Lee
+- It is just a few static HTML pages on the same computer for thirty years
+- Another example of a static site is...
+-->
+
+---
+layout: center
+---
+
+<img alt="Space Jam" src="/images/space-jam.png" />
+
+<!--
+- The famous Space Jam website
 -->
 
 ---
