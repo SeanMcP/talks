@@ -142,7 +142,9 @@ layout: center
 layout: center
 ---
 
-<img alt="CERN" src="/images/cern.png" />
+<a href="http://info.cern.ch/hypertext/WWW/TheProject.html">
+  <img alt="The WWW info page from CERN" src="/images/cern.png" />
+</a>
 
 <!--
 - The WWW info page from CERN
@@ -155,7 +157,9 @@ layout: center
 layout: center
 ---
 
-<img alt="Space Jam" src="/images/space-jam.png" />
+<a href="https://www.spacejam.com/1996">
+  <img alt="Space Jam" src="/images/space-jam.png" />
+</a>
 
 <!--
 - The famous Space Jam website
@@ -240,8 +244,9 @@ Server-rendered sites
 layout: center
 ---
 
-<img alt="MDN" src="/images/mdn.png" />
-<C>[MDN](https://developer.mozilla.org/en-US/)</C>
+<a href="https://developer.mozilla.org/en-US/">
+  <img alt="MDN" src="/images/mdn.png" />
+</a>
 
 <!--
 - MDN
@@ -399,8 +404,9 @@ Modern SPAs
 ---
 layout: center
 ---
-
-<img alt="Figma" src="/images/figma.png" />
+<a href="https://www.figma.com/">
+  <img alt="Figma" src="/images/figma.png" />
+</a>
 
 <!--
 - Highly interactive web applications like Figma
@@ -499,7 +505,9 @@ Multi-page applications
 layout: center
 ---
 
-<img alt="Notion" src="/images/notion.png" />
+<a href="https://www.notion.so/">
+  <img alt="Notion" src="/images/notion.png" />
+</a>
 
 ---
 
@@ -548,7 +556,9 @@ Modern static sites
 layout: center
 ---
 
-<img alt="Microsoft Fluent Design" src="/images/ms-fluent-design.png" />
+<a href="https://fluent2.microsoft.design/">
+  <img alt="Microsoft Fluent Design" src="/images/ms-fluent-design.png" />
+</a>
 
 <!--
 -->
@@ -557,15 +567,15 @@ layout: center
 
 # Architectures & Patterns
 
-|                        | <TC>Static sites</TC> | <TC>Server-rendered<br/>sites</TC> | <TC>Single-page<br/>apps</TC> | <TC>Multi-page<br/>apps</TC> |
-| ---------------------- | --------------------- | ---------------------------------- | ----------------------------- | ---------------------------- |
-| Static-site generation | <Check/>              |                                    |                               | <Check/>                     |
-| Server-side rendering  |                       | <Check/>                           |                               | <Check/>                     |
-| Islands                | <Check/>              | <Check/>                           |                               | <Check/>                     |
-| Client-side rendering  |                       |                                    | <Check/>                      | <Check/>                     |
-| Client-side navigation |                       |                                    | <Check/>                      | <Check/>                     |
-| Hybrid navigation      |                       |                                    |                               | <Check/>                     |
-| Hybrid rendering       |                       |                                    |                               | <Check/>                     |
+|                        | <div style="text-align:center">Static sites</div> | <div style="text-align:center">Server-rendered<br/>sites</div> | <div style="text-align:center">Single-page<br/>apps</div> | <div style="text-align:center">Multi-page<br/>apps</div> |
+| ---------------------- | ------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------- |
+| Static-site generation | <div style="text-align:center">✅</div>           |                                                                |                                                           | <div style="text-align:center">✅</div>                  |
+| Server-side rendering  |                                                   | <div style="text-align:center">✅</div>                        |                                                           | <div style="text-align:center">✅</div>                  |
+| Islands                | <div style="text-align:center">✅</div>           | <div style="text-align:center">✅</div>                        |                                                           | <div style="text-align:center">✅</div>                  |
+| Client-side rendering  |                                                   |                                                                | <div style="text-align:center">✅</div>                   | <div style="text-align:center">✅</div>                  |
+| Client-side navigation |                                                   |                                                                | <div style="text-align:center">✅</div>                   | <div style="text-align:center">✅</div>                  |
+| Hybrid navigation      |                                                   |                                                                |                                                           | <div style="text-align:center">✅</div>                  |
+| Hybrid rendering       |                                                   |                                                                |                                                           | <div style="text-align:center">✅</div>                  |
 
 <!--
 - This is a chart of the architectures we covered and the patterns they use
