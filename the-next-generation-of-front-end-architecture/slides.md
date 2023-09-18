@@ -424,17 +424,28 @@ layout: center
 
 - Abbreviated MPAs
 - Combining patterns from server-rendered sites and SPAs
-- Server-rendered pages
-- Client-side navigation
 - Powered by meta-frameworks
+- Server-side rendering _and_ client-side rendering
+- Full-page navigation _and_ client-side navigation
 - Example: Next, Remix
   - Nuxt (Vue), SvelteKit
 
 <!--
 - TITLE
+- This is a new architecture that combines aspects of...
+  - Server-rendered sites and single-page applications
+- Out of the box, these meta-frameworks provide...
+  - Server-side rendering
+  - Client-side rendering
+  - Server-side navigation
+  - Client-side navigation
+- The big examples in the React space are Next and Remix
+  - But most JS rendering libraries have a meta-framework like...
+  - Nuxt for Vue and SvelteKit for Svelte
 - These examples are all in JavaScript land
-- But there are meta-frameworks for your preferred language too
-- A friend called out Intertia as an interested option using PHP
+  - But there are meta-frameworks for your preferred language too
+  - A friend called out Intertia as an interested option using PHP
+- Multi-page apps expand on some previous patterns like...
 -->
 
 ---
@@ -449,6 +460,21 @@ Multi-page applications
 - Client-side JavaScript adds interactivity
 - Current status: Solid
 
+<!--
+- TITLE
+- Similar to server-side rendering, there is a server running that renders HTML
+- This response is available to the browser on initial load
+- Shortly after, the client fetches and executes the JavaScript bundle...
+- That takes the markup that was initially rendered on the server...
+- And "hydrates" it with interactivity
+- In React, this involves calling `hydrate` or `hydrateRoot` on the client...
+  - To create a virtual DOM tree on a DOM node that was rendered on the server
+  - (Hopefully those trees match, otherwise client-side React with re-render)
+- This is a solid pattern for improving web vitals for...
+  - A web app that uses a JS rendering library
+- After SSR with client-side hydration, the next pattern is...
+-->
+
 ---
 
 # 🧱 Pattern: Hybrid navigation
@@ -462,11 +488,28 @@ Multi-page applications
 - User experience benefits on navigation
 - Current status: Developing
 
+<!--
+- TITLE
+- This involves supporting both client- and server-side navigation
+- When a user first visits your site, they see a server-rendered page
+- The client is hydrated in the background, adding interactivity
+- When the user navigates within your app, client-side navigation kicks in...
+- And handles the navigation without a page request to the server
+- At any point when the user hits refresh, they get a server-rendered page
+- This provides the performance benefits of server-side rendering...
+  - And the positive user experience of client-side navigation
+- This pattern is still developing, because...
+  - It is tied closely to the meta-frameworks that support it
+- This pattern has some overlap with...
+-->
+
 ---
 
 # 🧱 Pattern: Hybrid rendering
 
 Multi-page applications
+
+<!-- TODO: Incorporate client-side rendering -->
 
 - Configurable rendering for each route
 - Statically-generated pages for static content
@@ -474,6 +517,12 @@ Multi-page applications
 - Current status: Developing
 
 <!--
+- TITLE
+- This patterns allows you to predetermine when you want each page rendered
+- For static content, you can generate the HTML at build time...
+  - And serve the files like a static-site architecture
+- For pages that require interactivity or personalization...
+  - You can server-render the page on the fly
 - Next and Astro support this for React sites
 -->
 
