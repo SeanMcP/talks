@@ -168,6 +168,24 @@ layout: center
 
 ---
 
+# ⚖️ Tradeoffs
+
+Static sites
+
+- Content is... static
+- Low/no interactivity
+- No dynamic content
+
+<!--
+- The tradeoffs for these original static sites it that the content is static
+- There is little to interact with
+- There is no concept of a logged-in experience
+- You could make network requests that communicate with a server...
+  - But at that point you should probably consider building a...
+-->
+
+---
+
 # 🏠 Architecture: Server-rendered sites
 
 - Applications running on a computer
@@ -178,8 +196,10 @@ layout: center
 - Examples: Wordpress (PHP), Rails (Ruby), Django (Python), Express (Node.js)
 
 <!--
+- TITLE
 - This next era was the beginning of web-based "applications"
 - Brought truly dynamic content to the web
+- TODO: Expand these notes
 - Server-rendered sites used two main patterns...
 -->
 
@@ -376,6 +396,23 @@ Early SPAs
 - This is the era of `create-react-app`, where bootstrapping a new SPA...
   - Required a single command in the terminal
   - And the willingness to go fast and break things
+- A great use case for the modern SPA architecture are...
+-->
+
+---
+layout: center
+---
+<a href="https://www.figma.com/">
+  <img alt="Figma" src="/images/figma.png" />
+</a>
+
+<!--
+
+- Highly interactive web applications like Figma
+- If you're building something that is closer to an app than a website...
+  - Then SPA is probably the best architecture for your project
+  - Figma is like that: it's basically Adobe Illustrator in the browser
+- But problems arise when you try to use this architecture in other contexts...
 -->
 
 ---
@@ -398,25 +435,91 @@ Modern SPAs
 - A11y: it was too easy to make inaccessible
   - The frameworks didn't provide any guardrails
   - And the community didn't always have the knowledge to make them accessible
-- All that aside, the SPA architecture is still a great option for...
+- To address some of these concerns, another "modern" architecture emerged...
 -->
+
+---
+
+# 🏠 Architecture: Modern static sites
+
+- Same features of early static sites
+- Use modern tooling to generate HTML pages
+  - Typically file-system based page generation
+- Use islands pattern for interactivity
+- Pages are cached on global CDNs
+- Sometimes called "JAMstack"
+- Examples: Astro, Next SvelteKit, Nuxt
+
+<!--
+- TITLE
+- These used leveraged modern tooling and frameworks originally used for SPAs...
+  - To generate static sites
+- TODO: PICK UP HERE
+- JAMstack was a term invented by host Netlify to advertise this architecture (hosted on their platform)
+  > The core principles of pre-rendering, and decoupling, enable sites and
+  > applications to be delivered with greater confidence and resilience than ever
+  > before.
+- Though the term "JAMstack" has faded into history, the architecture is still going strong
+-->
+
+---
+
+# 🧱 Pattern: Static-site generation
+
+Modern static sites
+
+- Abbreviated SSG
+- Automating the process of creating HTML pages
+- Support for templates
+- File system for directory structures
+- Some handle bundling resources
+- Current status: Solid
+
+---
+
+# 🧱 Pattern: Islands
+
+Multi-page applications
+
+- Also called "Islands Architecture" (sorry!)
+- Small, focused chunks of interactivity
+- Pre-/server-rendered markup is progressively enhanced with client-side
+  JavaScript
+- Scripts can be requested and run independently
+  - 🧱 Pattern: Progressive hydration
+- Successor to Plugins pattern
+- Current status: Developing
+
+<!--
+- I'm sorry about the naming confusion here
+- I think the idea of islands better fits as a pattern
+  - Especially because it can be used in multiple architectures
+- Astro is a framework designed for islands
+- Enables you to create sites with any JavaScript framework
+- Provides client directives to components that allow you to configure when an island hydrates
+-->
+
+---
+
+# ⚖️ Tradeoffs
+
+Modern static sites
+
+- Limited dynamic content
+- Performance challenge to add significant interactivity
+- Build times/resources for large sites
 
 ---
 layout: center
 ---
-<a href="https://www.figma.com/">
-  <img alt="Figma" src="/images/figma.png" />
+
+<a href="https://fluent2.microsoft.design/">
+  <img alt="Microsoft Fluent Design" src="/images/ms-fluent-design.png" />
 </a>
 
 <!--
-- Highly interactive web applications like Figma
-- If you're building something that is closer to an app than a website...
-  - Then SPA is probably the best architecture for your project
-  - Figma is like that: it's basically Adobe Illustrator in the browser
-- But that got folks in the industry thinking:
-- How can we find a way to get the benefits of SPAs without those tradeoffs
-- Enter...
 -->
+
 
 ---
 
@@ -527,90 +630,12 @@ Multi-page applications
 -->
 
 ---
-
-# 🧱 Pattern: Islands
-
-Multi-page applications
-
-- Also called "Islands Architecture" (sorry!)
-- Small, focused chunks of interactivity
-- Pre-/server-rendered markup is progressively enhanced with client-side
-  JavaScript
-- Scripts can be requested and run independently
-  - 🧱 Pattern: Progressive hydration
-- Successor to Plugins pattern
-- Current status: Developing
-
-<!--
-- I'm sorry about the naming confusion here
-- I think the idea of islands better fits as a pattern
-  - Especially because it can be used in multiple architectures
-- Astro is a framework designed for islands
-- Enables you to create sites with any JavaScript framework
-- Provides client directives to components that allow you to configure when an island hydrates
--->
-
----
 layout: center
 ---
 
 <a href="https://www.notion.so/">
   <img alt="Notion" src="/images/notion.png" />
 </a>
-
----
-
-# 🏠 Architecture: Modern static sites
-
-- Same features of early static sites
-- Use modern tooling to generate HTML pages
-  - Typically file-system based page generation
-- Use islands pattern for interactivity
-- Pages are cached on global CDNs
-- Sometimes called "JAMstack"
-- Examples: Astro, Next SvelteKit, Nuxt
-
-<!--
-- JAMstack was a term invented by host Netlify to advertise this architecture (hosted on their platform)
-  > The core principles of pre-rendering, and decoupling, enable sites and
-  > applications to be delivered with greater confidence and resilience than ever
-  > before.
-- Though the term "JAMstack" has faded into history, the architecture is still going strong
--->
-
----
-
-# 🧱 Pattern: Static-site generation
-
-Modern static sites
-
-- Abbreviated SSG
-- Automating the process of creating HTML pages
-- Support for templates
-- File system for directory structures
-- Some handle bundling resources
-- Current status: Solid
-
----
-
-# ⚖️ Tradeoffs
-
-Modern static sites
-
-- Limited dynamic content
-- Performance challenge to add significant interactivity
-- Build times/resources for large sites
-
----
-layout: center
----
-
-<a href="https://fluent2.microsoft.design/">
-  <img alt="Microsoft Fluent Design" src="/images/ms-fluent-design.png" />
-</a>
-
-<!--
--->
 
 ---
 
