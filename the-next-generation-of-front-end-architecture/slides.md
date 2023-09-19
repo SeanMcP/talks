@@ -9,15 +9,16 @@ Sean McPherson, Software Engineer @ Khan Academy
 
 <!--
 - It's great to be speaking here at TechFest
-- This is my first in-person talk after two remote events
+- This is my first in-person conference after two remote events
 - It feels great to be back in the same room as other people
 - This is _The Next Generation of Front-End Architecture_
 - And before I being, I feel like I need to apologize
 - When I came up with the title of this talk...
-- the connection to the Star Trek series didn't occur to me
+  - the connection to the Star Trek series didn't occur to me
 - So if you came here for a Star-Trek-themed talk, I'm sorry to disappoint you
-- But I think you'll enjoy this discussion of modern front-end architecture
-- But before I go any further, let me introduce myself...
+- But... if you're willing to stick around...
+  - I think you'll enjoy this discussion of modern front-end architecture
+- Before I go any further, let me introduce myself...
 -->
 
 ---
@@ -38,8 +39,10 @@ Sean McPherson, Software Engineer @ Khan Academy
 - and I'm a software engineer mostly in the world of front-end web development
 - I work for Khan Academy, which is...
 - KHAN_ACADEMY_TAGLINE
-- If you're interested in EdTech and especially AI in education, I'd love to chat afterwards
-- Before Khan Academy, I worked for Niche.com which is headquartered here in Pittsburgh
+- If you're interested in EdTech and especially AI in education...
+  - I'd love to chat afterwards
+- Before Khan Academy, I worked for Niche.com which...
+  - Is headquartered here in Pittsburgh (Any Niche folks here?)
 - And before that I lived in Atlanta and worked for TSYS
 - And once upon a time, I was a classroom teacher
 - I live here in Pittsburgh--just over the river in Wilkinsburg---with my family
@@ -454,12 +457,21 @@ Modern SPAs
 - TITLE
 - These used leveraged modern tooling and frameworks originally used for SPAs...
   - To generate static sites
-- TODO: PICK UP HERE
-- JAMstack was a term invented by host Netlify to advertise this architecture (hosted on their platform)
+- These sites can add interactivity with the islands pattern...
+  - That we'll look at in a moment
+- The static files of the sites can be cached on global CDNs like CloudFlare...
+  - To provide a fast loading experience for users around the world
+- This architecture is sometimes called "JAMstack"
+  - Which stands for JavaScript, APIs, and Markup
+  - But what exactly that meant was never very clear
+- JAMstack was a term invented by host Netlify...
+  - To advertise this architecture (hosted on their platform)
   > The core principles of pre-rendering, and decoupling, enable sites and
   > applications to be delivered with greater confidence and resilience than ever
   > before.
-- Though the term "JAMstack" has faded into history, the architecture is still going strong
+- Though the term "JAMstack" has faded into history...
+  - The architecture is still going strong
+- Some patterns that are important to this architecture are...
 -->
 
 ---
@@ -475,29 +487,75 @@ Modern static sites
 - Some handle bundling resources
 - Current status: Solid
 
+<!--
+- TITLE
+- This is the pattern that makes static sites an attractive option for...
+  - Modern developer
+- Developers get to use the tools that they are familiar with...
+  - Like React, Vue, or Svelte
+  - To template, style, and generate a large number of HTML pages
+- Static-site generators run against a directory and...
+  - Look for any filetype (usually markdown) that they can convert into HTML
+- Some static-site generators handle tricky things like...
+  - Resource bundling, and responsive images out of the box
+- This is a "solid" pattern for generating static sites with...
+  - Tens to hundreds to thousands of pages
+- Once you have the pages generated, modern static sites use...
+-->
+
 ---
 
 # 🧱 Pattern: Islands
 
 Multi-page applications
 
-- Also called "Islands Architecture" (sorry!)
 - Small, focused chunks of interactivity
 - Pre-/server-rendered markup is progressively enhanced with client-side
   JavaScript
 - Scripts can be requested and run independently
   - 🧱 Pattern: Progressive hydration
 - Successor to Plugins pattern
+- Also called "Islands Architecture" (sorry!)
 - Current status: Developing
 
 <!--
-- I'm sorry about the naming confusion here
+- Islands for interactivity
+- These are small, focused chunks of interactive and/or dynamic content
+- They are typically server-rendered or pre-rendered, which means...
+  - The initial markup is available to the browser on the first load
+- Individual scripts then run on the client to...
+  - Progressively enhance the markup with data and event listeners
+  - This step is called "hydration"
+- Some libraries support progressive hydration, which means...
+  - The developer can configure when the hydration happens (load, scroll, etc.)
+- I view these as the successor to plugins because they provide an initial state
+- This pattern is frequently referred to as the "Islands Architecture"
+  - I'm sorry about the naming confusion!
 - I think the idea of islands better fits as a pattern
   - Especially because it can be used in multiple architectures
-- Astro is a framework designed for islands
-- Enables you to create sites with any JavaScript framework
-- Provides client directives to components that allow you to configure when an island hydrates
+- If you're interested in exploring this pattern, I recommend...
+  - Looking into Astro, which is a framework designed around islands
+- A good example of modern static sites is...
 -->
+
+---
+layout: center
+---
+
+<a href="https://fluent2.microsoft.design/">
+  <img alt="Microsoft Fluent Design" src="/images/ms-fluent-design.png" />
+</a>
+
+<!--
+- A documentation site like Microsoft's Fluent Design
+- This site is built with Astro and showcases...
+  - The patterns of modern static sites
+- All of the pages are generated at build time and then cached for visitors
+- There are islands sprinkled throughout the docs pages...
+  - To enable the visitor to interact with the design system
+- While the architecture is a good fit for some sites, there are...
+-->
+
 
 ---
 
@@ -509,17 +567,19 @@ Modern static sites
 - Performance challenge to add significant interactivity
 - Build times/resources for large sites
 
----
-layout: center
----
-
-<a href="https://fluent2.microsoft.design/">
-  <img alt="Microsoft Fluent Design" src="/images/ms-fluent-design.png" />
-</a>
-
 <!--
+- Tradeoffs
+- Islands provide an option for dynamic content, but...
+  - By design that will be limited to small sections of the page
+- And coordinating the the interactions between multiple islands
+  - Becomes a logistical and performance challenge
+- And finally build times can grow significantly as...
+  - The number of pages increases
+- Typically static-site generators will generate every page on every build...
+  - Even if the content hasn't changed, which gets expensive
+- Some try to only generate pages that contain information that has changed...
+  - But that is a hard problem to solve
 -->
-
 
 ---
 
