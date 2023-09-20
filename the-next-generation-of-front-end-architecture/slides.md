@@ -672,8 +672,10 @@ Multi-page applications
 
 Multi-page applications
 
-<!-- TODO: Incorporate client-side rendering -->
-
+- Support for:
+  - Server-side rendering
+  - Client-side rendering
+  - Static-page generation
 - Configurable rendering for each route
 - Statically-generated pages for static content
 - Server-rendered pages for interactivity, personalization
@@ -681,12 +683,19 @@ Multi-page applications
 
 <!--
 - TITLE
-- This patterns allows you to predetermine when you want each page rendered
-- For static content, you can generate the HTML at build time...
-  - And serve the files like a static-site architecture
+- There are three components to this. Being able to render a page...
+  - On the server, on the client, or at build time
+- The former two are a requirement for hybrid navigation
+- But the addition of static-page generation brings some of the benefits...
+  - Of the static-site architecture too
+- So for static content, you can generate the HTML at build time...
+  - And serve the files like a static site
 - For pages that require interactivity or personalization...
   - You can server-render the page on the fly
-- Next and Astro support this for React sites
+- Next supports all three modes of rendering...
+  - And other frameworks like Astro provide an option for server or static
+- Multi-page applications give you access to all of these patterns...
+  - Which makes them a great candidate for apps like...
 -->
 
 ---
@@ -697,25 +706,42 @@ layout: center
   <img alt="Notion" src="/images/notion.png" />
 </a>
 
+<!--
+- Notion, which is built with Next
+- The site is probably a combination of...
+  - Statically-generated or server-rendered pages
+- While the main webapp is a single-page application
+- In reality, Notion's applications might be spread across...
+  - Multiple projects and repositories
+  - Those of us on the outside have no way of knowing
+- But by using a meta-framework like Next, they could use all of these patterns...
+  - To meet each specific need in their product
+- Woo! We've made it to the end of the last architecture of the day.
+- Let's sum everything up with a nice table...
+-->
+
 ---
 
 # Architectures & Patterns
 
-|                        | <div style="text-align:center">Static sites</div> | <div style="text-align:center">Server-rendered<br/>sites</div> | <div style="text-align:center">Single-page<br/>apps</div> | <div style="text-align:center">Multi-page<br/>apps</div> |
-| ---------------------- | ------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------- |
-| Static-site generation | <div style="text-align:center">✅</div>           |                                                                |                                                           | <div style="text-align:center">✅</div>                  |
-| Server-side rendering  |                                                   | <div style="text-align:center">✅</div>                        |                                                           | <div style="text-align:center">✅</div>                  |
-| Islands                | <div style="text-align:center">✅</div>           | <div style="text-align:center">✅</div>                        |                                                           | <div style="text-align:center">✅</div>                  |
-| Client-side rendering  |                                                   |                                                                | <div style="text-align:center">✅</div>                   | <div style="text-align:center">✅</div>                  |
-| Client-side navigation |                                                   |                                                                | <div style="text-align:center">✅</div>                   | <div style="text-align:center">✅</div>                  |
-| Hybrid navigation      |                                                   |                                                                |                                                           | <div style="text-align:center">✅</div>                  |
-| Hybrid rendering       |                                                   |                                                                |                                                           | <div style="text-align:center">✅</div>                  |
+|                        | <center>Static sites</center> | <center>Server-rendered<br/>sites</center> | <center>Single-page<br/>apps</center> | <center>Multi-page<br/>apps</center> |
+| ---------------------- | ----------------------------- | ------------------------------------------ | ------------------------------------- | ------------------------------------ |
+| Static-site generation | <center>✅</center>           |                                            |                                       | <center>✅</center>                  |
+| Server-side rendering  |                               | <center>✅</center>                        |                                       | <center>✅</center>                  |
+| Islands                | <center>✅</center>           | <center>✅</center>                        |                                       | <center>✅</center>                  |
+| Client-side rendering  |                               |                                            | <center>✅</center>                   | <center>✅</center>                  |
+| Client-side navigation |                               |                                            | <center>✅</center>                   | <center>✅</center>                  |
+| Hybrid navigation      |                               |                                            |                                       | <center>✅</center>                  |
+| Hybrid rendering       |                               |                                            |                                       | <center>✅</center>                  |
 
 <!--
-- This is a chart of the architectures we covered and the patterns they use
-- Each have their focus
-- Multi-page apps provide the most options
-- We'll consider this more as we go into...
+- This shows all of the architectures we covered and the patterns they use
+- You can see that each architecture has its focus
+- In some ways this isn't fair, because...
+  - The "Hybrid" patterns are sort-of counted twice for MPAs
+- But I think it communicates the point that...
+  - Multi-page apps are the most flexible architecture
+- We'll take this into consideration as we go into...
 -->
 
 ---
@@ -724,6 +750,16 @@ layout: center
 
 # Recommendations
 
+<!--
+- TITLE
+- Here is where we're going to take what we've learned...
+  - And use that information to make some general recommendations
+  - About which front-end architecture is best designed for a project
+- Because in reality...
+-->
+
+---
+layout: quote
 ---
 
 # Recommendations
@@ -731,6 +767,17 @@ layout: center
 - All decisions are trade-offs
 - Assess your needs
 - Compare to each architecture's strengths & weaknesses
+
+<!--
+- The answer to "which architecture should I use?" is...
+  - It depends
+- You need to assess your needs from product, business, and team perspectives
+- And then compare those needs to the strengths and weaknesses...
+  - of each architecture
+- With that in mind, I'm going to go through each architecture...
+  - And give describe some project characteristics that would make it a good fit
+- First off is...
+-->
 
 ---
 
@@ -745,6 +792,13 @@ layout: center
 - Patterns: static-site generation, islands
 - Tools: Astro, Hugo, Eleventy
 
+<!--
+- TITLE
+- AD_LIB_THROUGH_THE_SLIDES_BE_HUMAN
+- You're not worried about logged-in experiences
+- Next is...
+-->
+
 ---
 
 # Recommendation: Server-rendered sites
@@ -756,6 +810,18 @@ layout: center
   - _e.g._ localization, logged-in/-out
 - Patterns: server-side rendering, islands
 - Tools: Wordpress, your favorite language's framework
+
+<!--
+- TITLE
+- AD_LIB_THROUGH_THE_SLIDES_BE_HUMAN
+- As soon as you need to interact with a database...
+  - Or offer some kind of logged-in experience...
+  - You should probably reach for a server-rendered site
+- Wordpress powers 40% of the top 10 million websites
+  - So chances are it will work for your project
+- But if your project is a little more dynamic, more interactive...
+  - Then you should consider...
+-->
 
 ---
 
@@ -771,6 +837,16 @@ layout: center
 - Internal application with hardware & connection guarantees
 - Patterns: client-side rendering, client-side navigation
 - Tools: Vite with your preferred front-end framework
+
+<!--
+- TITLE
+- AD_LIB_THROUGH_THE_SLIDES_BE_HUMAN
+- So if you're building a software as a service company that does, I dunno...
+  - Real-time management of a fleet of autonomous robotic vacuum cleaners
+  - Then a single-page application is right up your alley
+- Just don't make your landing page and documentation site a SPA, okay? Please?
+- If you want maximum flexibility, then look into...
+-->
 
 ---
 
@@ -790,6 +866,8 @@ layout: center
 - Tools: Next, Remix, SveltKit, Nuxt
 
 <!--
+- TITLE
+- AD_LIB_THROUGH_THE_SLIDES_BE_HUMAN
 - But don't just take my word for it...
 -->
 
@@ -797,8 +875,8 @@ layout: center
 
 # Meta-frameworks are the future
 
-> If you want to build a new app or a new website fully with React, we recommend
-> picking one of the React-powered frameworks popular in the community.
+> If you want to build a new app or a new website fully with React, **we recommend
+> picking one of the React-powered frameworks** popular in the community.
 > Frameworks provide features that most apps and sites eventually need,
 > including routing, data fetching, and generating HTML.
 
@@ -808,13 +886,18 @@ layout: center
 
 -- [Svelte docs](https://svelte.dev/docs/introduction#start-a-new-project)
 
-> We highly recommend giving [Nuxt] a try
+> We highly recommend giving Nuxt a try
 
 -- [Vue docs](https://vuejs.org/guide/scaling-up/ssr.html#nuxt)
 
 <!--
-- If you're in React land, you may have heard a lot about React Server Components and how game-changing they are
-- If you use a meta-framework like Next, you get the benefits of that new pattern out-of-the-box
+- The MPA meta-frameworks provide you a toolkit to build your app...
+  - And give you access to the most patterns for your project
+- If you're in React land, you may have heard a lot about...
+  - React Server Components and how game-changing they are
+- If you use a meta-framework like Next...
+  - You get the benefits of that new pattern out-of-the-box
+- And finally, that brings us to...
 -->
 
 ---
@@ -832,9 +915,11 @@ layout: center
 <!--
 - Since this is my talk, I'm going to end with some of my personal picks
   - Astro is a really interesting project that checks almost all of the boxes
-  - You could have a single repository that generates static pages, server-renders content, and serves SPAs
-  - Bonus: You get to use whatever front-end framework you want... even more than one
-    - Probably don't do that!
+  - You could have a single repository that...
+  - Generates static pages, server-renders content, and serves a SPA
+  - Bonus: You get to use whatever front-end framework you want
+    - You could even use more than one in the same project!
+    - (Probably don't do that)
 - A safer bet might be to pick a meta-framework like Next or Remix
   - There are tons of documentation and examples out there for Next
 - A finally, if you're open to options other than React: I highly recommend checking out Svelte
@@ -863,8 +948,31 @@ layout: center
 
 <!--
 - I chose to focus on the growth in meta-frameworks for this talk, but
-- There is a growing movement to make static and server-rendered sites more interactive
-- Here are some patterns that we didn't have time to discuss that are worth keeping an eye on
+- There is a growing movement to make...
+  - Static and server-rendered sites more interactive
+- Here are some patterns that we didn't have time to discuss...
+  - That are worth keeping an eye on
+- AD_LIB_QUICKLY_THROUGH_THE_PATTERNS
+- That's all I had...
+-->
+---
+
+# Special thanks
+
+- Khan Academy for letting me speak here today
+- Emily Janzer, Josh Smith, and Luke Rathbun for reviewing these slides
+- Anne McPherson for giving up her evenings with me this month
+
+<div style="bottom:2.5rem;opacity:50%;position:absolute;right:3.5rem;">SDG</div>
+
+<!--
+- I wanted to end with some special thanks
+- Khan Academy for letting take the time to speak to yinz today
+- Emily Janzer at Khan Academy...
+- Josh Smith at Calendly, and...
+- Luke Rathbun at Publicis Media for proofreading these slides
+- And finally, my wife Anne for giving up a bunch of evenings...
+  - With me so that I could prepare this talk
 -->
 
 ---
@@ -873,13 +981,6 @@ layout: center
 
 # Questions?
 
----
-
-# Special thanks
-
-- Khan Academy for letting me speak here today
-- Emily Janzer, Josh Smith, and Luke Rathbun for reviewing these slides
-- Anne McPherson for giving up her evenings with me this month
 
 ---
 layout: end
