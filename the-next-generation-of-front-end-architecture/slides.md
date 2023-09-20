@@ -9,12 +9,12 @@ Sean McPherson, Software Engineer @ Khan Academy
 
 <!--
 - It's great to be speaking here at TechFest
-- This is my first in-person conference after two remote events
-- It feels great to be back in the same room as other people
+- This is my first in-person conference since 2019
+- It feels great to be back in the same room as other people... real humans!
 - This is _The Next Generation of Front-End Architecture_
 - And before I being, I feel like I need to apologize
 - When I came up with the title of this talk...
-  - the connection to the Star Trek series didn't occur to me
+  - The connection to the Star Trek series didn't occur to me
 - So if you came here for a Star-Trek-themed talk, I'm sorry to disappoint you
 - But... if you're willing to stick around...
   - I think you'll enjoy this discussion of modern front-end architecture
@@ -35,14 +35,14 @@ Sean McPherson, Software Engineer @ Khan Academy
 - Live in Pittsburgh, PA
 
 <!--
-- My name is Sean McPherson
+- My name is Sean McPherson...
 - and I'm a software engineer mostly in the world of front-end web development
 - I work for Khan Academy, which is...
 - KHAN_ACADEMY_TAGLINE
 - If you're interested in EdTech and especially AI in education...
   - I'd love to chat afterwards
 - Before Khan Academy, I worked for Niche.com which...
-  - Is headquartered here in Pittsburgh (Any Niche folks here?)
+  - Is headquartered here in Pittsburgh (any Niche folks here?)
 - And before that I lived in Atlanta and worked for TSYS
 - And once upon a time, I was a classroom teacher
 - I live here in Pittsburgh--just over the river in Wilkinsburg---with my family
@@ -64,13 +64,14 @@ Focus on the JavaScript ecosystem
 
 <!--
 - Today our goal is to LEARNING_OBJECTIVE
-- I'm going to focus on the JavaScript ecosystem
+- I'm going to focus on the JavaScript ecosystem because...
+  - That's where I have the most experience.
   - But the concepts will be applicable in other language environments
-- We're going to look at a five-ish front-end architectures
-- And the patterns that make them work
-- We'll look at examples of each architecture
-- And analyze some of their tradeoffs
-- Finally we'll end with some recommendations for choosing an architecture
+- We're going to look at a five-ish front-end architectures...
+  - And the patterns that make them work
+- We'll look at examples of each architecture...
+  - And analyze some of their tradeoffs
+- Then we'll end with some recommendations for choosing an architecture
 - Before leaving some time for questions at the end
 - Alrighty, let's kick it off with some terms...
 -->
@@ -80,21 +81,22 @@ Focus on the JavaScript ecosystem
 # Definitions
 
 <!-- TODO: Consider switching the order -->
+- **Architecture**: design decisions related to overall system structure and
+  behavior 🏠
+  - Comprises multiple software-engineering patterns
 
 - **Patterns**: general and reusable solutions to commonly occurring problem 🧱
 
-- **Architecture**: design decisions related to overall system structure and
-  behavior 🏠
-  - Comprises multiple patterns
 
-[SEI CMU. (n.d.) "Software Architecture".](https://www.sei.cmu.edu/our-work/software-architecture/)
+[SEI CMU. "Software Architecture".](https://www.sei.cmu.edu/our-work/software-architecture/)
 
 <!--
-- We're going to be talking about patterns and architectures
+- We're going to be talking about architectures and patterns
 - For the purpose of this talk, we're going to use some definitions that are...
   - Lightly edited from PGH's own Software Engineering Institute at CMU
+- Architectures will be defined as ARCHITECTURE_DEFINITION
+- What are patterns?
 - Patterns are PATTERN_DEFINITION
-- And architectures as ARCHITECTURE_DEFINITION
 - To help distinguish between the two, I'll use emojis to key you in
   - The brick emoji for patterns
     - a general and reusable component that is used to build something bigger
@@ -113,8 +115,8 @@ layout: center
 <!--
 - BODY
 - We're going to proceed through these in roughly chronological order
-- And this isn't going to be an exhaustive list of all front-end architectures
-- We'll focus on the ones that are still relevant today
+- But this isn't going to be an exhaustive list of all front-end architectures
+  - We'll focus on the ones that are still relevant today
 - The first architecture historically and the first one we'll look at is...
 -->
 
@@ -131,14 +133,14 @@ layout: center
 - All sites were just files stored on a computer somewhere...
   - that you could access on with an internet connection
 - Any updates to the site required changing those static files directly...
-- Or using a protocol like FTP or SSH
-- This might sound ancient to some of you, depending on your experience
-- But this is still a common practice for serving websites today
-- When you sign up for hosting with one of the big companies like Host Gator...
+  - Maybe using a protocol like FTP or SSH
+- This might sound ancient to some of you, depending on your experience...
+  - But this is still a common practice for serving websites today
+- When you sign up for hosting with a big company like Host Gator...
   - They give you access to a computer where you can store your static files
 - There aren't any patterns for us to discuss here...
   - Beyond using the main web technologies: HTML, CSS, and JS
-- Let's at an example with the first website ever...
+- So let's jump right into an example with the first website ever...
 -->
 
 ---
@@ -153,7 +155,7 @@ layout: center
 - The WWW info page from CERN
 - Created by Tim Berners-Lee
 - It is just a few static HTML pages on the same computer for thirty years
-- Another example of a static site is...
+- Another example of a classic static site you may be familiar with is...
 -->
 
 ---
@@ -165,8 +167,9 @@ layout: center
 </a>
 
 <!--
-- The famous Space Jam website
+- The famous Space Jam website from 1996
 - Survived the test of time thanks to this simple architecture
+- But despite the longevity of these examples...
 -->
 
 ---
@@ -180,11 +183,14 @@ Static sites
 - No dynamic content
 
 <!--
-- The tradeoffs for these original static sites it that the content is static
-- There is little to interact with
-- There is no concept of a logged-in experience
-- You could make network requests that communicate with a server...
-  - But at that point you should probably consider building a...
+- Static sites still have their tradeoffs
+- First is that the content is static
+- There is little to interact with -- you're just clicking around a few pages
+- There is no concept of a logged-in experience...
+  - Which is a key feature for most products
+- You _could_ make network requests that communicate with a server...
+  - And try to selectively navigate to pages and render based on the response
+  - But at that point you should probably the next architecture...
 -->
 
 ---
@@ -200,10 +206,15 @@ Static sites
 
 <!--
 - TITLE
-- This next era was the beginning of web-based "applications"
+- This architecture marked the beginning of web-based "applications"
 - Brought truly dynamic content to the web
-- TODO: Expand these notes
-- Server-rendered sites used two main patterns...
+- These server applications could read/write to file systems and databases
+  - Which meant they could provide dynamic content their users
+- JavaScript was developing this period, and frameworks like jQuery...
+  - Could add interactivity to pages with plugins
+- Tools like Wordpress, Rails, Django, and later Express were created to...
+  - Build server-rendered sites
+- This architecture used two main patterns...
 -->
 
 ---
@@ -220,7 +231,16 @@ Server-rendered sites
 - Current status: Solid
 
 <!--
-- Each pattern we discuss will have a status at the end
+- TITLE
+- This is when server applications receive network requests...
+  - Directly from the browser...
+  - And then respond with HTML
+- This is valuable, because the server can interact with a database...
+  - To provide dynamic content to the user
+- Server to server requests are typically faster
+- And things like secrets can stay secret on the sever
+- Now each of the patterns we discuss will have a status at the end...
+  - To give you an idea of where that pattern stands in modern front-end development
 - "Solid" means that you could build your business on their pattern without worrying
 - As we will see, other patterns inspire much less confidence...
 -->
@@ -238,29 +258,19 @@ Server-rendered sites
 - Current status: Aging
 
 <!--
+- Like TITLE
+- Plugins are isolated scripts that bring specific interactivity to a site
+- They are typically written in JavaScript with a library like...
+  - jQuery or MooTools
+  - and run on a DOM node to create an interactive UI
 - The status here means that you could use it today...
   - But don't expect it to last long
+- I think a good example of this is creator of jQuery, John Resig...
+  - Who works at Khan Academy with me...
+  - Is no longer writing plugins with jQuery
 - There are some contexts where plugins might be the best pattern
 - Replaced by web components and islands (which we will discuss later)
-- The server-rendered site architecture has some tradeoffs...
--->
-
----
-
-# ⚖️ Tradeoffs
-
-Server-rendered sites
-
-- Full-page loads feel slow
-- Server issues may increase time to first byte (TTFB)
-  - Traffic surges
-  - Global user base
-
-<!--
-- Best for short sessions
-- Thanks to network latency, navigation multiple pages in a session...
-  - Is heavier than loading everything up front
-- A great example of a server-rendered site today is...
+- A good example of a server-rendered site today is...
 -->
 
 ---
@@ -278,6 +288,31 @@ layout: center
 - Full-page loads aren't an issue
   - You're not primarily navigating the site a lot
   - Google search, then click the link that fits
+- MDN is great, but this architecture does have its...
+-->
+
+---
+
+# ⚖️ Tradeoffs
+
+Server-rendered sites
+
+- Full-page loads feel slow
+- Server issues may increase time to first byte (TTFB)
+  - Traffic surges
+  - Global user base
+- Creating interactive experiences is complex
+
+<!--
+- TITLE
+- The biggest tradeoff is that often full-page loads "feel" slow to the user
+  - Even if the response from the server is relatively quick
+- So this architecture is best for shorter sessions
+- Thanks to network latency, navigation multiple pages in a session...
+  - Is heavier than loading everything up front
+- And finally, it is challenging to creating highly interactive experiences...
+  - When you are depending on plugins for interactivity
+- To build a more immersive experience, you need to look at...
 -->
 
 ---
@@ -294,6 +329,7 @@ layout: center
 - Examples: Macromedia Flash, Microsoft Silverlight
 
 <!--
+- TITLE
 - This was a "Wild West" period for front-end architecture
 - Anything was "possible"; anything goes
 - Gave us some really interesting applications
