@@ -129,8 +129,8 @@ layout: center
 
 <!--
 - ARCHITECTURE_TYPE
-- All sites were just files stored on a computer somewhere...
-  - that you could access on with an internet connection
+- These sites were just files stored on a computer somewhere...
+  - that you could access with an internet connection
 - Any updates to the site required changing those static files directly...
   - Maybe using a protocol like FTP or SSH
 - This might sound ancient to some of you, depending on your experience...
@@ -434,7 +434,7 @@ Early SPAs
 - And to make things worse, Flash became a major target for hackers
 - Ultimately these technologies failed to revolutionize the web
 - Steve Jobs famously killed Flash by not supporting it in the iPhone
-- The patterns they introduced became the foundation behind...
+- But the patterns they introduced became the foundation behind...
 -->
 
 ---
@@ -529,7 +529,7 @@ Modern SPAs
   > The core principles of pre-rendering, and decoupling, enable sites and
   > applications to be delivered with greater confidence and resilience than ever
   > before.
-- Though the term "JAMstack" has faded into history...
+- Though the term "JAMstack" is fading into history...
   - The architecture is still going strong
 - Some patterns that are important to this architecture are...
 -->
@@ -550,7 +550,7 @@ Modern static sites
 <!--
 - TITLE
 - This is the pattern that makes static sites an attractive option for...
-  - Modern developer
+  - Modern development
 - Developers get to use the tools that they are familiar with...
   - Like React, Vue, or Svelte
   - To template, style, and generate a large number of HTML pages
@@ -657,6 +657,7 @@ Modern static sites
 - TITLE
 - This is a new architecture that combines aspects of...
   - Server-rendered sites and single-page applications
+- Powered by meta-frameworks
 - Out of the box, these meta-frameworks provide...
   - Server-side rendering
   - Client-side rendering
@@ -752,7 +753,7 @@ Multi-page applications
   - And serve the files like a static site
 - For pages that require interactivity or personalization...
   - You can server-render the page on the fly
-- Next supports all three modes of rendering...
+- The framework Next supports all three modes of rendering...
   - And other frameworks like Astro provide an option for server or static
 - Multi-page applications give you access to all of these patterns...
   - Which makes them a great candidate for apps like...
@@ -835,7 +836,7 @@ layout: quote
 - And then compare those needs to the strengths and weaknesses...
   - of each architecture
 - With that in mind, I'm going to go through each architecture...
-  - And give describe some project characteristics that would make it a good fit
+  - And describe some project characteristics that would make it a good fit
 - First off is...
 -->
 
@@ -951,12 +952,15 @@ layout: quote
 -- [Vue docs](https://vuejs.org/guide/scaling-up/ssr.html#nuxt)
 
 <!--
+- These are some quotes from the documentation sites for React, Svelte, and View
+- READ_QUOTES
 - The MPA meta-frameworks provide you a toolkit to build your app...
   - And give you access to the most patterns for your project
 - If you're in React land, you may have heard a lot about...
   - React Server Components and how game-changing they are
 - If you use a meta-framework like Next...
   - You get the benefits of that new pattern out-of-the-box
+  - Without needing to learn about it and implement it yourself
 - And finally, that brings us to...
 -->
 
@@ -984,7 +988,7 @@ layout: quote
   - There are tons of documentation and examples out there for Next
 - A finally, if you're open to options other than React: I highly recommend checking out Svelte
   - SvelteKit has its quirks, but Svelte is my favorite way to author web apps
-  - It has a small bundles, fast interactions, and shaves off all of the React's painful edges
+  - It has a small bundles, fast interactions, and shaves off all of React's painful edges
 -->
 
 ---
