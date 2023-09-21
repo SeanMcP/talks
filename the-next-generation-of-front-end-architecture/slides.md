@@ -73,14 +73,13 @@ Focus on the JavaScript ecosystem
   - And analyze some of their tradeoffs
 - Then we'll end with some recommendations for choosing an architecture
 - Before leaving some time for questions at the end
-- Alrighty, let's kick it off with some terms...
+- Alright, let's kick it off with some terms...
 -->
 
 ---
 
 # Definitions
 
-<!-- TODO: Consider switching the order -->
 - **Architecture**: design decisions related to overall system structure and
   behavior 🏠
   - Comprises multiple software-engineering patterns
@@ -93,7 +92,7 @@ Focus on the JavaScript ecosystem
 <!--
 - We're going to be talking about architectures and patterns
 - For the purpose of this talk, we're going to use some definitions that are...
-  - Lightly edited from PGH's own Software Engineering Institute at CMU
+  - Lightly edited from Pittsburgh's own Software Engineering Institute at CMU
 - Architectures will be defined as ARCHITECTURE_DEFINITION
 - What are patterns?
 - Patterns are PATTERN_DEFINITION
@@ -224,11 +223,11 @@ Static sites
 Server-rendered sites
 
 - Abbreviated SSR
-- Server code that renders and returns HTML
+- Server code that renders & returns HTML
 - Server can interface with database
 - Server-to-server requests are faster
 - Secrets are kept on the server
-- Current status: Solid
+- Current status: **Solid** 👍
 
 <!--
 - TITLE
@@ -251,11 +250,11 @@ Server-rendered sites
 
 Server-rendered sites
 
-- Isolated scripts that bring specific interactivity to a site
+- Isolated scripts that bring specific interactivity
 - JavaScript code that is paired with a DOM node
 - JS runs on the client to create the UI in the DOM
-- Powered by jQuery and MooTools
-- Current status: Aging
+- Powered by libraries like jQuery and MooTools
+- Current status: **Aging** 📉
 
 <!--
 - Like TITLE
@@ -320,7 +319,7 @@ Server-rendered sites
 # 🏠 Architecture: Early single-page applications
 
 - Abbreviated SPAs
-- Highly interactive and immersive experiences
+- Highly interactive & immersive experiences
 - Try to recreate native applications on the web
   - Initially desktop programs
   - Later mobile apps
@@ -329,9 +328,15 @@ Server-rendered sites
 - Examples: Macromedia Flash, Microsoft Silverlight
 
 <!--
-- TITLE
+- TITLE or SPAs
+- These were highly interactive apps that tried to recreate native experiences
+  - First that meant desktop applications...
+  - But later they were chasing mobile-like experiences
+- Because the entire application was running from a single web page...
+  - You needed to recreate a lot browser functionality
+  - Which starts fun but quickly becomes a headache
 - This was a "Wild West" period for front-end architecture
-- Anything was "possible"; anything goes
+  - Anything was "possible"; anything goes
 - Gave us some really interesting applications
   - Spun up a whole industry of Flash games that I remember fondly
 - Just a little tangent: I got started in web development thanks to Flash.
@@ -351,7 +356,7 @@ Single-page applications
 - Large bundle that builds site on node when executed
 - Typically created with a framework
 - Client-side code handles all updates
-- Current status: Solid
+- Current status: **Solid** 👍
 
 <!--
 - Start with an empty HTML page and a bundle of client-side code
@@ -361,7 +366,7 @@ Single-page applications
   - Opening/closing menus
 - I'm classifying this pattern as "Solid" because of...
   - Later advancements with other frameworks that we'll discuss
-- FTR: I do **not** recommend building a new SPA with Flash or Silverlight!
+- FTR: I **do not** recommend building a new SPA with Flash or Silverlight!
 - A pattern that goes hand-in-hand with client-side rendering is...
 -->
 
@@ -374,7 +379,7 @@ Single-page applications
 - All "navigation" occurs within a single HTML page
 - Sometimes mocks URL changes with History API
 - Client-side code determines what views to render
-- Current status: Solid
+- Current status: **Solid** 👍
 
 <!--
 - TITLE
@@ -384,7 +389,25 @@ Single-page applications
   - Transitions can be almost instantaneous
 - They can even be animated to give the user that native experience
 - This pattern is also "Solid" because it is useful today in certain contexts
-- Even though both SPA patterns are solid, there were some notable tradeoffs...
+- I was able to dig up a good example of a SPA from this era...
+-->
+
+---
+layout: center
+---
+
+<a href="https://www.creativebloq.com/flash/best-flash-sites-ever-7087173#4-advanced-studios-v3">
+  <img alt="Advanced Studios" src="/images/advanced-studios.png" />
+</a>
+
+<!--
+- A site for Advanced Studios that was built entirely in Flash
+- Sorry that I don't have a good screenshot of this one...
+  - Most of the sites from this area are long gone
+- You better believe that all of the buttons and menus were animated
+- And there were probably little sounds effects and transitions too
+- As cool as this was (you'll have to trust me that it _was_ cool)...
+  - It highlights some of the...
 -->
 
 ---
@@ -401,13 +424,14 @@ Early SPAs
 - Poor security
 
 <!--
+- TITLE
 - Their reliance on non-web technologies was a major issue
   - I remember the days of talking to my grandparents over the phone...
   - And trying to walk through the process of installing Flash or Silverlight
 - A11y: non-web technologies left users with disabilities out in the cold
   - Screenreaders couldn't access the content
   - Keyboard users couldn't interact with the apps
-
+- And to make things worse, Flash became a major target for hackers
 - Ultimately these technologies failed to revolutionize the web
 - Steve Jobs famously killed Flash by not supporting it in the iPhone
 - The patterns they introduced became the foundation behind...
@@ -421,9 +445,9 @@ Early SPAs
 - Powered by front-end JavaScript frameworks
   - Angular, Ember, React, Vue, Svelte
 - Provide app-like experiences with web technologies
-  - HTML, CSS, and a lot of JavaScript
+  - HTML, CSS, lots of JavaScript
 - Maturation of previous era of SPAs
-- Example: `create-react-app` and `react-router-dom`
+- Example: `create-react-app`, `react-router-dom`
 
 <!--
 - TITLE
@@ -487,11 +511,11 @@ Modern SPAs
 - Use islands pattern for interactivity
 - Pages are cached on global CDNs
 - Sometimes called "JAMstack"
-- Examples: Astro, Next SvelteKit, Nuxt
+- Examples: Astro, Next, SvelteKit, Nuxt
 
 <!--
 - TITLE
-- These used leveraged modern tooling and frameworks originally used for SPAs...
+- These leveraged some modern tooling and frameworks originally used for SPAs...
   - To generate static sites
 - These sites can add interactivity with the islands pattern...
   - That we'll look at in a moment
@@ -521,7 +545,7 @@ Modern static sites
 - Support for templates
 - File system for directory structures
 - Some handle bundling resources
-- Current status: Solid
+- Current status: **Solid** 👍
 
 <!--
 - TITLE
@@ -546,13 +570,12 @@ Modern static sites
 Multi-page applications
 
 - Small, focused chunks of interactivity
-- Pre-/server-rendered markup is progressively enhanced with client-side
-  JavaScript
-- Scripts can be requested and run independently
+- Initial markup is progressively enhanced
+- Scripts can be requested & run independently
   - 🧱 Pattern: Progressive hydration
 - Successor to Plugins pattern
 - Also called "Islands Architecture" (sorry!)
-- Current status: Developing
+- Current status: **Developing** 📈
 
 <!--
 - Islands for interactivity
@@ -567,7 +590,7 @@ Multi-page applications
 - I view these as the successor to plugins because they provide an initial state
 - This pattern is frequently referred to as the "Islands Architecture"
   - I'm sorry about the naming confusion!
-- I think the idea of islands better fits as a pattern
+- I think the idea of islands better fits as a pattern...
   - Especially because it can be used in multiple architectures
 - If you're interested in exploring this pattern, I recommend...
   - Looking into Astro, which is a framework designed around islands
@@ -607,7 +630,7 @@ Modern static sites
 - Tradeoffs
 - Islands provide an option for dynamic content, but...
   - By design that will be limited to small sections of the page
-- And coordinating the the interactions between multiple islands
+- And coordinating the interactions between multiple islands
   - Becomes a logistical and performance challenge
 - And finally build times can grow significantly as...
   - The number of pages increases
@@ -615,6 +638,7 @@ Modern static sites
   - Even if the content hasn't changed, which gets expensive
 - Some try to only generate pages that contain information that has changed...
   - But that is a hard problem to solve
+- That brings us to our final architecture...
 -->
 
 ---
@@ -622,10 +646,10 @@ Modern static sites
 # 🏠 Architecture: Multi-page applications
 
 - Abbreviated MPAs
-- Combining patterns from server-rendered sites and SPAs
+- Combining patterns from server-rendered sites & SPAs
 - Powered by meta-frameworks
-- Server-side rendering _and_ client-side rendering
-- Full-page navigation _and_ client-side navigation
+- Server-side rendering _&_ client-side rendering
+- Full-page navigation _&_ client-side navigation
 - Example: Next, Remix
   - Nuxt (Vue), SvelteKit
 
@@ -643,7 +667,7 @@ Modern static sites
   - Nuxt for Vue and SvelteKit for Svelte
 - These examples are all in JavaScript land
   - But there are meta-frameworks for your preferred language too
-  - A friend called out Intertia as an interested option using PHP
+  - A friend called out Inertia as an interested option using PHP
 - Multi-page apps expand on some previous patterns like...
 -->
 
@@ -657,15 +681,15 @@ Multi-page applications
 - Browser paints with initial response from server
 - Client fetches/executes JavaScript bundle
 - Client-side JavaScript adds interactivity
-- Current status: Solid
+- Current status: **Solid** 👍
 
 <!--
 - TITLE
 - Similar to server-side rendering, there is a server running that renders HTML
 - This response is available to the browser on initial load
 - Shortly after, the client fetches and executes the JavaScript bundle...
-- That takes the markup that was initially rendered on the server...
-- And "hydrates" it with interactivity
+  - That takes the markup that was initially rendered on the server...
+  - And "hydrates" it for interactivity -- sets up event listeners
 - In React, this involves calling `hydrate` or `hydrateRoot` on the client...
   - To create a virtual DOM tree on a DOM node that was rendered on the server
   - (Hopefully those trees match, otherwise client-side React with re-render)
@@ -685,7 +709,7 @@ Multi-page applications
 - User interaction trigger client-side navigation
 - Performance benefits on first load
 - User experience benefits on navigation
-- Current status: Developing
+- Current status: **Developing** 📈
 
 <!--
 - TITLE
@@ -715,7 +739,7 @@ Multi-page applications
 - Configurable rendering for each route
 - Statically-generated pages for static content
 - Server-rendered pages for interactivity, personalization
-- Current status: Developing
+- Current status: **Developing** 📈
 
 <!--
 - TITLE
@@ -899,7 +923,7 @@ layout: quote
   - Client-side rendering/navigation
   - Immersive user experience
 - Patterns: hybrid rendering, hybrid routing, islands
-- Tools: Next, Remix, SveltKit, Nuxt
+- Tools: Next, Remix, SvelteKit, Nuxt
 
 <!--
 - TITLE
