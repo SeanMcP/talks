@@ -10,9 +10,9 @@ Sean McPherson, Software Engineer @ Khan Academy
 <!--
 - It's great to be speaking here at TechFest
 - This is my first in-person conference since 2019
-- It feels great to be back in the same room as other people... real humans!
+- It feels great to be back in the same room as other people!
 - This is _The Next Generation of Front-End Architecture_
-- And before I being, I feel like I need to apologize
+- But before I being, I feel like I need to apologize
 - When I came up with the title of this talk...
   - The connection to the Star Trek series didn't occur to me
 - So if you came here for a Star-Trek-themed talk, I'm sorry to disappoint you
@@ -40,10 +40,10 @@ Sean McPherson, Software Engineer @ Khan Academy
 - I work for Khan Academy, which is...
 - KHAN_ACADEMY_TAGLINE
 - If you're interested in EdTech and especially AI in education...
-  - I'd love to chat afterwards
+  - I'd love to chat afterwards about the cool things we're doing at Khan
 - Before Khan Academy, I worked for Niche.com which...
   - Is headquartered here in Pittsburgh (any Niche folks here?)
-- And before that I lived in Atlanta and worked for TSYS
+- And before I worked for a fintech company in Atlanta called TSYS
 - And once upon a time, I was a classroom teacher
 - I live here in Pittsburgh--just over the river in Wilkinsburg---with my family
 - And I'm excited to be here today talking about front-end architecture...
@@ -66,12 +66,12 @@ Focus on the JavaScript ecosystem
 - Today our goal is to LEARNING_OBJECTIVE
 - I'm going to focus on the JavaScript ecosystem because...
   - That's where I have the most experience.
-  - But the concepts will be applicable in other language environments
+  - But the concepts we discuss will be applicable in other language environments
 - We're going to look at a five-ish front-end architectures...
   - And the patterns that make them work
 - We'll look at examples of each architecture...
   - And analyze some of their tradeoffs
-- Then we'll end with some recommendations for choosing an architecture
+- We'll end with some recommendations for choosing an architecture
 - Before leaving some time for questions at the end
 - Alright, let's kick it off with some terms...
 -->
@@ -82,9 +82,9 @@ Focus on the JavaScript ecosystem
 
 - **Architecture**: design decisions related to overall system structure and
   behavior 🏠
-  - Comprises multiple software-engineering patterns
+  - Made up of multiple software-engineering patterns
 
-- **Patterns**: general and reusable solutions to commonly occurring problem 🧱
+- **Patterns**: general and reusable solutions to commonly occurring problems 🧱
 
 
 [SEI CMU. "Software Architecture".](https://www.sei.cmu.edu/our-work/software-architecture/)
@@ -94,6 +94,7 @@ Focus on the JavaScript ecosystem
 - For the purpose of this talk, we're going to use some definitions that are...
   - Lightly edited from Pittsburgh's own Software Engineering Institute at CMU
 - Architectures will be defined as ARCHITECTURE_DEFINITION
+  - AND_FIRST_BULLET
 - What are patterns?
 - Patterns are PATTERN_DEFINITION
 - To help distinguish between the two, I'll use emojis to key you in
@@ -116,7 +117,7 @@ layout: center
 - We're going to proceed through these in roughly chronological order
 - But this isn't going to be an exhaustive list of all front-end architectures
   - We'll focus on the ones that are still relevant today
-- The first architecture historically and the first one we'll look at is...
+- So the first architecture historically and the first one we'll look at is...
 -->
 
 ---
@@ -153,6 +154,7 @@ layout: center
 <!--
 - The WWW info page from CERN
 - Created by Tim Berners-Lee
+  - Who is famous for having invented the web
 - It is just a few static HTML pages on the same computer for thirty years
 - Another example of a classic static site you may be familiar with is...
 -->
@@ -167,7 +169,7 @@ layout: center
 
 <!--
 - The famous Space Jam website from 1996
-- Survived the test of time thanks to this simple architecture
+- It has survived the test of time thanks to this simple architecture
 - But despite the longevity of these examples...
 -->
 
@@ -189,7 +191,7 @@ Static sites
   - Which is a key feature for most products
 - You _could_ make network requests that communicate with a server...
   - And try to selectively navigate to pages and render based on the response
-  - But at that point you should probably the next architecture...
+  - But at that point you should probably look at the next architecture...
 -->
 
 ---
@@ -205,12 +207,15 @@ Static sites
 
 <!--
 - TITLE
+- These were server applications listening to network requests...
+  - And responding with HTML
+- Users could send input back to the server with HTML forms
+- JavaScript was developing this period, and frameworks like jQuery...
+  - Could add interactivity to pages with plugins
 - This architecture marked the beginning of web-based "applications"
 - Brought truly dynamic content to the web
 - These server applications could read/write to file systems and databases
   - Which meant they could provide dynamic content their users
-- JavaScript was developing this period, and frameworks like jQuery...
-  - Could add interactivity to pages with plugins
 - Tools like Wordpress, Rails, Django, and later Express were created to...
   - Build server-rendered sites
 - This architecture used two main patterns...
@@ -233,14 +238,16 @@ Server-rendered sites
 - TITLE
 - This is when server applications receive network requests...
   - Directly from the browser...
-  - And then respond with HTML
-- This is valuable, because the server can interact with a database...
+  - And then respond with HTML markup for a page
+- This is valuable, because -- like I said before --
+  - the server can interact with a database...
   - To provide dynamic content to the user
 - Server to server requests are typically faster
 - And things like secrets can stay secret on the sever
 - Now each of the patterns we discuss will have a status at the end...
   - To give you an idea of where that pattern stands in modern front-end development
-- "Solid" means that you could build your business on their pattern without worrying
+- The server-side rendering pattern is "Solid", which means...
+  - that you could build your business on their pattern without worrying
 - As we will see, other patterns inspire much less confidence...
 -->
 
@@ -262,14 +269,15 @@ Server-rendered sites
 - They are typically written in JavaScript with a library like...
   - jQuery or MooTools
   - and run on a DOM node to create an interactive UI
-- The status here means that you could use it today...
+- The status here is "Aging", which means that you could use it today...
   - But don't expect it to last long
 - I think a good example of this is creator of jQuery, John Resig...
   - Who works at Khan Academy with me...
   - Is no longer writing plugins with jQuery
 - There are some contexts where plugins might be the best pattern
-- Replaced by web components and islands (which we will discuss later)
-- A good example of a server-rendered site today is...
+- But I think they're mostly replaced by web components and islands...
+  - (which we will discuss later)
+- Plugins aside, a good example of a server-rendered site today is...
 -->
 
 ---
@@ -282,11 +290,10 @@ layout: center
 
 <!--
 - MDN
-- Besides the unparalleled quality of the documentation
-- Focused on SEO
-- Full-page loads aren't an issue
-  - You're not primarily navigating the site a lot
-  - Google search, then click the link that fits
+- Here we have a server-rendered site...
+  - That focuses on SEO to make sure it ranks highly in search results
+- The initial page loads are quick, helping the user...
+  - Get the information they need and get out quickly
 - MDN is great, but this architecture does have its...
 -->
 
@@ -304,11 +311,13 @@ Server-rendered sites
 
 <!--
 - TITLE
-- The biggest tradeoff is that often full-page loads "feel" slow to the user
+- The biggest is that often full-page loads "feel" slow to the user
   - Even if the response from the server is relatively quick
 - So this architecture is best for shorter sessions
+  - When a users will only be on site for a few pages
 - Thanks to network latency, navigation multiple pages in a session...
   - Is heavier than loading everything up front
+  - (Which is a pattern we'll look at later)
 - And finally, it is challenging to creating highly interactive experiences...
   - When you are depending on plugins for interactivity
 - To build a more immersive experience, you need to look at...
@@ -329,6 +338,8 @@ Server-rendered sites
 
 <!--
 - TITLE or SPAs
+- I've divided this architecture into two eras...
+  - So we're focusing on _early_ single-page applications
 - These were highly interactive apps that tried to recreate native experiences
   - First that meant desktop applications...
   - But later they were chasing mobile-like experiences
@@ -336,13 +347,13 @@ Server-rendered sites
   - You needed to recreate a lot browser functionality
   - Which starts fun but quickly becomes a headache
 - This was a "Wild West" period for front-end architecture
-  - Anything was "possible"; anything goes
+  - Because when anything was "possible"; anything goes
 - Gave us some really interesting applications
   - Spun up a whole industry of Flash games that I remember fondly
 - Just a little tangent: I got started in web development thanks to Flash.
   - The first sites I built were in Flash or for hosting Flash apps
   - So forgive me but I look back on this era with some rose-tinted glasses
-- Okay, tangent over!
+- But anyway!
 - This architecture introduced a few important patterns...
 -->
 
@@ -359,15 +370,17 @@ Single-page applications
 - Current status: **Solid** 👍
 
 <!--
-- Start with an empty HTML page and a bundle of client-side code
+- TITLE
+- This is where you start with an empty HTML page and a bundle of client-side code
 - The bundle generates the UI for the website
 - The client-side code handles all updates to the UI
   - Toggling checkboxes
   - Opening/closing menus
+  - And even navigating screens
 - I'm classifying this pattern as "Solid" because of...
   - Later advancements with other frameworks that we'll discuss
 - FTR: I **do not** recommend building a new SPA with Flash or Silverlight!
-- A pattern that goes hand-in-hand with client-side rendering is...
+- A pattern that goes hand-in-hand with client-side rendering is..
 -->
 
 ---
@@ -403,7 +416,7 @@ layout: center
 <!--
 - A site for Advanced Studios that was built entirely in Flash
 - Sorry that I don't have a good screenshot of this one...
-  - Most of the sites from this area are long gone
+  - Most of the sites from this era are long gone
 - You better believe that all of the buttons and menus were animated
 - And there were probably little sounds effects and transitions too
 - As cool as this was (you'll have to trust me that it _was_ cool)...
@@ -428,12 +441,12 @@ Early SPAs
 - Their reliance on non-web technologies was a major issue
   - I remember the days of talking to my grandparents over the phone...
   - And trying to walk through the process of installing Flash or Silverlight
-- A11y: non-web technologies left users with disabilities out in the cold
+- By and large, they weren't accessible: non-web technologies left users with disabilities out in the cold
   - Screenreaders couldn't access the content
   - Keyboard users couldn't interact with the apps
 - And to make things worse, Flash became a major target for hackers
-- Ultimately these technologies failed to revolutionize the web
-- Steve Jobs famously killed Flash by not supporting it in the iPhone
+- Ultimately these technologies failed to revolutionize the web before...
+  - Steve Jobs famously killed Flash by not supporting it in the iPhone
 - But the patterns they introduced became the foundation behind...
 -->
 
@@ -465,16 +478,17 @@ Early SPAs
 ---
 layout: center
 ---
+
 <a href="https://www.figma.com/">
   <img alt="Figma" src="/images/figma.png" />
 </a>
 
 <!--
-
 - Highly interactive web applications like Figma
 - If you're building something that is closer to an app than a website...
   - Then SPA is probably the best architecture for your project
-  - Figma is like that: it's basically Adobe Illustrator in the browser
+  - Figma is like that: it's basically Adobe Illustrator in the browser...
+  - With tons of real-time collaboration features built in
 - But problems arise when you try to use this architecture in other contexts...
 -->
 
@@ -490,12 +504,14 @@ Modern SPAs
 - Too easy to make inaccessible
 
 <!--
-- Once the SPA was up and running, it was great
+Once the SPA was up and running, it was great
 - But the initial load was a major issue
 - Chaining network requests to load all of the JavaScript and CSS
-- SEO: initially Google's web crawler couldn't index any content on SPAs
-  - That has changed, but long load times result in poor web vitals
-- A11y: it was too easy to make inaccessible
+- And initially Google's web crawler couldn't index any content on SPAs
+  - Which made SEO a big issue
+  - That has changed a bit, but long load times result in poor web vitals
+- Accessibility was/is still a concern
+  - it was/is too easy to make inaccessible
   - The frameworks didn't provide any guardrails
   - And the community didn't always have the knowledge to make them accessible
 - To address some of these concerns, another "modern" architecture emerged...
@@ -531,7 +547,8 @@ Modern SPAs
   > before.
 - Though the term "JAMstack" is fading into history...
   - The architecture is still going strong
-- Some patterns that are important to this architecture are...
+- Some example tools for this are EXAMPLES
+- This architecture introduced the following patterns...
 -->
 
 ---
@@ -548,7 +565,7 @@ Modern static sites
 - Current status: **Solid** 👍
 
 <!--
-- TITLE
+- Like TITLE
 - This is the pattern that makes static sites an attractive option for...
   - Modern development
 - Developers get to use the tools that they are familiar with...
@@ -584,12 +601,13 @@ Multi-page applications
   - The initial markup is available to the browser on the first load
 - Individual scripts then run on the client to...
   - Progressively enhance the markup with data and event listeners
-  - This step is called "hydration"
+  - This process is called "hydration"
 - Some libraries support progressive hydration, which means...
   - The developer can configure when the hydration happens (load, scroll, etc.)
 - I view these as the successor to plugins because they provide an initial state
+  - And then progressively enhance it when possible
 - This pattern is frequently referred to as the "Islands Architecture"
-  - I'm sorry about the naming confusion!
+  - Which is unfortunate!
 - I think the idea of islands better fits as a pattern...
   - Especially because it can be used in multiple architectures
 - If you're interested in exploring this pattern, I recommend...
@@ -606,15 +624,14 @@ layout: center
 </a>
 
 <!--
-- A documentation site like Microsoft's Fluent Design
+- The documentation for Microsoft's Fluent Design
 - This site is built with Astro and showcases...
   - The patterns of modern static sites
 - All of the pages are generated at build time and then cached for visitors
 - There are islands sprinkled throughout the docs pages...
   - To enable the visitor to interact with the design system
-- While the architecture is a good fit for some sites, there are...
+- While the architecture is a good fit for some sites, there are always...
 -->
-
 
 ---
 
@@ -657,7 +674,8 @@ Modern static sites
 - TITLE
 - This is a new architecture that combines aspects of...
   - Server-rendered sites and single-page applications
-- Powered by meta-frameworks
+- It's powered by meta-frameworks...
+  - Special applications designed to handle modern web development
 - Out of the box, these meta-frameworks provide...
   - Server-side rendering
   - Client-side rendering
@@ -688,12 +706,12 @@ Multi-page applications
 - TITLE
 - Similar to server-side rendering, there is a server running that renders HTML
 - This response is available to the browser on initial load
-- Shortly after, the client fetches and executes the JavaScript bundle...
+- Shortly after, the client fetches and executes a JavaScript bundle...
   - That takes the markup that was initially rendered on the server...
-  - And "hydrates" it for interactivity -- sets up event listeners
+  - And "hydrates" it -- sets it up for interactivity for the user
 - In React, this involves calling `hydrate` or `hydrateRoot` on the client...
   - To create a virtual DOM tree on a DOM node that was rendered on the server
-  - (Hopefully those trees match, otherwise client-side React with re-render)
+  - (Hopefully those trees match, otherwise client-side React with re-render and you lose some of the benefits)
 - This is a solid pattern for improving web vitals for...
   - A web app that uses a JS rendering library
 - After SSR with client-side hydration, the next pattern is...
@@ -751,6 +769,7 @@ Multi-page applications
   - Of the static-site architecture too
 - So for static content, you can generate the HTML at build time...
   - And serve the files like a static site
+  - Think of a site that also has a blog: all those articles could be statically rendered at build time and then cached
 - For pages that require interactivity or personalization...
   - You can server-render the page on the fly
 - The framework Next supports all three modes of rendering...
@@ -831,7 +850,8 @@ layout: quote
 
 <!--
 - The answer to "which architecture should I use?" is...
-  - It depends
+  - "It depends"
+  - I know that that is a boring answer, but it is true
 - You need to assess your needs from product, business, and team perspectives
 - And then compare those needs to the strengths and weaknesses...
   - of each architecture
@@ -846,7 +866,7 @@ layout: quote
 
 - Content focus
   - _e.g._ blogs, documentation
-- SEO
+- SEO is important
 - Little to no dynamic content
 - Uniform experience for all users
 - Easily cached on a CDN
@@ -866,7 +886,7 @@ layout: quote
 
 - Content focus
   - _e.g._ e-commerce, simple dashboards
-- SEO
+- SEO is important
 - Different experience for different users
   - _e.g._ localization, logged-in/-out
 - Patterns: server-side rendering, islands
@@ -915,14 +935,9 @@ layout: quote
 
 - Diverse content: static, interactive
   - _e.g._ Khan Academy, Jira
+- SEO is important
 - Rich logged-out content
-  - Server-side rendered
-  - Pre-rendered routes for static content
-  - Good performance
-  - Good SEO
 - Dynamic logged-in experiences
-  - Client-side rendering/navigation
-  - Immersive user experience
 - Patterns: hybrid rendering, hybrid routing, islands
 - Tools: Next, Remix, SvelteKit, Nuxt
 
@@ -977,18 +992,20 @@ layout: quote
 - Dark horse: Svelte & SvelteKit
 
 <!--
+- TITLE
 - Since this is my talk, I'm going to end with some of my personal picks
-  - Astro is a really interesting project that checks almost all of the boxes
+- First off, I think Astro is a really interesting project that checks almost all of the boxes
   - You could have a single repository that...
   - Generates static pages, server-renders content, and serves a SPA
   - Bonus: You get to use whatever front-end framework you want
     - You could even use more than one in the same project!
-    - (Probably don't do that)
+    - (Probably don't do that -- but you could!)
 - A safer bet might be to pick a meta-framework like Next or Remix
   - There are tons of documentation and examples out there for Next
-- A finally, if you're open to options other than React: I highly recommend checking out Svelte
+- And finally, if you're open to options other than React: I highly recommend checking out Svelte
   - SvelteKit has its quirks, but Svelte is my favorite way to author web apps
   - It has a small bundles, fast interactions, and shaves off all of React's painful edges
+-Next, we have...
 -->
 
 ---
@@ -1011,14 +1028,17 @@ layout: quote
   - Frameworks to improve authoring experience: lit, Stencil
 
 <!--
-- I chose to focus on the growth in meta-frameworks for this talk, but
+- TITLE
+- I chose to focus on the growth in popularity of meta-frameworks for this talk, but
 - There is a growing movement to make...
   - Static and server-rendered sites more interactive
 - Here are some patterns that we didn't have time to discuss...
   - That are worth keeping an eye on
 - AD_LIB_QUICKLY_THROUGH_THE_PATTERNS
+- Okay
 - That's all I had...
 -->
+
 ---
 
 # Special thanks
@@ -1031,8 +1051,8 @@ layout: quote
 
 <!--
 - I wanted to end with some special thanks
-- Khan Academy for letting take the time to speak to yinz today
-- Emily Janzer at Khan Academy...
+- First to Khan Academy for letting take the time to speak to yinz today
+- Next to Emily Janzer at Khan Academy...
 - Josh Smith at Calendly, and...
 - Luke Rathbun at Publicis Media for proofreading these slides
 - And finally, my wife Anne for giving up a bunch of evenings...
@@ -1045,6 +1065,11 @@ layout: center
 
 # Questions?
 
+<center>
+
+[smcp.dev/ngfea](https://smcp.dev/ngfea)
+
+</center>
 
 ---
 layout: end
