@@ -346,6 +346,7 @@ Server-rendered sites
 - Because the entire application was running from a single web page...
   - You needed to recreate a lot browser functionality
   - Which starts fun but quickly becomes a headache
+- Some example technologies for this era were EXAMPLES
 - This was a "Wild West" period for front-end architecture
   - Because when anything was "possible"; anything goes
 - Gave us some really interesting applications
@@ -460,7 +461,7 @@ Early SPAs
 - Provide app-like experiences with web technologies
   - HTML, CSS, lots of JavaScript
 - Maturation of previous era of SPAs
-- Example: `create-react-app`, `react-router-dom`
+- Examples: `create-react-app`, `react-router-dom`
 
 <!--
 - TITLE
@@ -667,8 +668,8 @@ Modern static sites
 - Powered by meta-frameworks
 - Server-side rendering _&_ client-side rendering
 - Full-page navigation _&_ client-side navigation
-- Example: Next, Remix
-  - Nuxt (Vue), SvelteKit
+- Examples: Next, Remix for React
+  - Nuxt (Vue), SvelteKit (Svelte)
 
 <!--
 - TITLE
