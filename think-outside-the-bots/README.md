@@ -37,4 +37,29 @@ At Khan Academy, I have been working on activities that give students AI-powered
         - "Let's build tools that offer suggestions to help us gain clarity in our thinking, let us sculpt prose like clay by manipulating geometry in the latent space, and chain models under the hood to let us move objects (instead of pixels) in a video."
     - "we can add controls, information, and affordances to our chatbot interfaces to make them more usable." #solution
     - "I can't wait to see the field become more mature and for us to start building AI tools that embrace our human abilities."
-
+- _Language Model Sketchbook, or Why I Hate Chatbots_ by Maggie Appleton. https://maggieappleton.com/lm-sketchbook
+    - "We don't quite know what to do with language models yet. But we have some hunches."
+    - "The primary interface everyone and their mother jumps to at this point is the chatbot. We are irreversibly anchored to this text-heavy, turn-based interface paradigm. And sure, it's a great solution in a lot of cases! It's flexible, familiar, and easy to implement."
+    - "But it's also the lazy solution. It's only the obvious tip of the iceberg when it comes to exploring how we might interact with these strange new language model agents we've grown inside a neural net."
+    - Iceberg graphic
+    - Daemons
+        - "Imagine the environment you're writing in has a few characters who hang out in the background and suggest ideas to you every now and then."
+        - "These daemons have particular personalities – one plays devil's advocate, one says encouraging things and compliments your writing, one synthesises your ideas into more concise statements, one fetches evidence and research for you, one elaborates on points you haven't fully explained, etc."
+        - "As you write, one of them might highlight a sentence and suggest a revision, or ask you to defend a claim. You can always ignore them if you like and the suggestion will fade."
+        - Video & screenshots
+    - Branches
+        - "A lot of what we think of as “understanding an issue” often comes down to “What caused this?” and “What are the consequences of this?”. ... We usually get to the bottom of these questions through a mix of research and sitting alone trying to think hard about the issue at hand."
+        - "It seems plausible language models would be good helpers in this department. They have plenty of latent knowledge and I've found they're quite good at suggesting reasonable cause-and-effect chains. As long as you double-check its suggestions and don't take them as gospel."
+    - Epi
+        - "Models can help in a bunch of small ways – rephrasing sentences, offering critiques of ideas, helping to find evidence for claims, generating possible research questions, and pointing out our assumptions."
+        - "Epi uses the familiar right-click context menu to make these moves available in a simple writing context."
+- _Natural language is the lazy user interface_ by Austin Z. Henley. https://austinhenley.com/blog/naturallanguageui.html
+    - "ChatGPT has kicked off a frenzy. It is all anyone in the tech world is talking about it seems. Startups are popping up left and right. Big companies are rapidly releasing ChatGPT-like features integrated in their products."
+    - "People are anticipating that large language models are going to revolutionize the world. / And maybe they will."
+    - "But a chat bot won't."
+    - "Expecting users to primarily interact with software in natural language is lazy. / It puts all the burden on the user to articulate good questions. What to ask, when to ask it, how to ask it, to make sense of the response, and then to repeat that many times."
+    - "A good user interface let's me iteratively and incrementally explore the problem and solution space in a variety of ways. / A great user interface guides me and offers nudges."
+    - "Couldn't a natural language interface help with that? / Certainly. / But not as the only option. Probably not even the main interface."
+    - "The need to support multiple modalities isn't new—it just seems we are so awestruck by LLMs that new software features are launching that regress to a single modality."
+    - "The potential of LLMs goes far beyond a natural language interface."
+    - "For example, an application could feed the relevant context to the model behind the scenes and use that to preemptively suggest what I should do next."
