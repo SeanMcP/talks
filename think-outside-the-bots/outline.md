@@ -1,0 +1,16 @@
+- Introduction
+- Surveying the room
+    - How many of your have worked to implement something using "AI" at your company?
+    - How many of you have plans or aspirations to?
+- Popular examples of AI
+- Thesis:
+    - Successful AI adoption requires as human-first approach to design 
+- Human-Centric Design
+    - Humans have goals and products help reach them
+    - No human has the goal of interacting with a LLM-driven chatbot (unless they are investigating the technology)
+    - Humans want to do something, accomplish something
+- Technology-Centric Design
+    - These are the limitations of the underlying technology which translate to the product
+- TUI vs GUI
+    - We've been through this revolution before
+- MKBHD's Product vs Feature Distinction

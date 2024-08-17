@@ -1,3 +1,5 @@
+# Reimagining AI: A Human-Centric Approach to Model Interactions
+
 **Presentation details**
 
 The explosion of large-language models in the past few years has turned everyone's attention to AI. OpenAI's ChatGPT has pioneered a new pattern for human-model interactions that other companies have been eager to follow. But is the chat-bot pattern the future of AI-powered products? In this talk, we'll analyze and critique current patterns of human-model interactions and consider a more human-centric future for AI.
@@ -63,3 +65,4 @@ At Khan Academy, I have been working on activities that give students AI-powered
     - "The need to support multiple modalities isn't new—it just seems we are so awestruck by LLMs that new software features are launching that regress to a single modality."
     - "The potential of LLMs goes far beyond a natural language interface."
     - "For example, an application could feed the relevant context to the model behind the scenes and use that to preemptively suggest what I should do next."
+- _AI the Product vs AI the Feature_ by MKBHD. https://youtu.be/sDIi95CqTiM
