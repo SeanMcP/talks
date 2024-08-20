@@ -12,6 +12,17 @@ Employees from companies currently or considering developing AI-powered products
 
 At Khan Academy, I have been working on activities that give students AI-powered feedback on long-form writing to encourage learning. We're using these LLMs in a novel way, and I believe that a more task-focused interactions are the future of human-model interactions. I plan to compare our product, GitHub's Copilot, and Adobe's Firefly, with standard chat bots to illustrate how human-centered tools are the future.
 
+## AI Tools
+- Apple Intelligence https://www.apple.com/apple-intelligence/
+    - Writing Tools
+    - ChatGPT Integration
+- Adobe Firefly https://www.adobe.com/products/firefly.html
+    - Generative Fill
+- GitHub Copilot https://github.com/features/copilot
+    - Suggestions
+    - Explanations
+    - Fix & Refactor
+
 ## Resources
 
 - _Meet Khanmigo Writing Coach_ by Khan Academy. https://blog.khanacademy.org/meet-khanmigo-writing-coach-helping-learners-become-better-writers/
@@ -66,3 +77,10 @@ At Khan Academy, I have been working on activities that give students AI-powered
     - "The potential of LLMs goes far beyond a natural language interface."
     - "For example, an application could feed the relevant context to the model behind the scenes and use that to preemptively suggest what I should do next."
 - _AI the Product vs AI the Feature_ by MKBHD. https://youtu.be/sDIi95CqTiM
+    - I think he's citing https://www.wired.com/story/gadget-lab-podcast-647/ but I couldn't find the direct quotes
+    - "AI is a feature, not a product"
+    - "You could even consider going to the ChatGPT website and using it there as 'AI as a product'"
+    - "It's a different way of thinking about AI for the consumer, where it's just one of the features built into the thing that you use."
+    - With Apple Intelligence, Apple is working on their own models that run on device and "building a ChatGPT wrapper into a lot of their OS"
+    - "More people in the long run are going to end up using this AI stuff as a feature more than going to a standalone thing"
+    - "I found it really hard to find any examples of the other way around happening"

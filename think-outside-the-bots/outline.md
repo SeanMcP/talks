@@ -11,6 +11,7 @@
     - Humans want to do something, accomplish something
 - Technology-Centric Design
     - These are the limitations of the underlying technology which translate to the product
+    - When you are a hammer, every problem looks like a nail
 - TUI vs GUI
     - We've been through this revolution before
 - MKBHD's Product vs Feature Distinction
