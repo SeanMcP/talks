@@ -23,6 +23,24 @@ At Khan Academy, I have been working on activities that give students AI-powered
     - Explanations
     - Fix & Refactor
 
+## Three main criticisms of chatbots
+1. Place the burden of interaction on the user
+    - Have no affordences (Wattenberger)
+    - The burden to learn what works still lies with every single user (Wattenberger)
+    - Puts all the burden on the user (Henley)
+2. Re-active responses
+    - Turn-based interaction paradigm (Appleton)
+    - Burder is on the user to think of what, when, and how to ask and then make sense of the response (Henley)
+    - There is now "flow" state if I'm stopping every few seconds to read a response (Wattenberger)
+3. Difficult to use generated content
+    - Difficult to find out what changed between responses (Wattenberger)
+
+## Three improvements to chatbots
+1. Model interactions that are tailored to a user's goal
+    - Let's take the time to bake as much information into the interface as possible instead of making users hack it into each of their questions. (Wattenberger)
+2. Pro-active responses
+3. Content generation is the main interaction
+
 ## Resources
 
 - _Meet Khanmigo Writing Coach_ by Khan Academy. https://blog.khanacademy.org/meet-khanmigo-writing-coach-helping-learners-become-better-writers/
