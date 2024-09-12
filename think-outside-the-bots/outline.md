@@ -18,6 +18,34 @@
 
 ---
 
+High Level:
+
+1. Introduction
+2. Background
+   1. Terminology
+   2. Survey the room
+   3. Brief history
+3. The Problem: Technology-centric design
+   1. No direction
+   2. No context
+   3. No resolution
+4. The Solution: Human-centric design
+   1. Target a resolution
+   2. Build in context
+   3. Design a direction
+5. Examples
+   1. Khanmigo Writing Coach
+   2. Khanmigo Coeditor
+   3. GitHub Copilot
+   4. Adobe Firefly
+   5. Apple Intelligence
+6. Takeaways
+   1. Chase the problem, not the solution
+   2. Focus on the human user and their goals
+   3. Embrace multiple model types and interaction modes
+
+Slides:
+
 1. Thinking outside the bots: A Human-centric Approach to Model Interactions
 2. Sean McPherson/Pittsburgh/Software Engineer
 3. Building AI-powered learning experiences at Khan Academy
@@ -34,3 +62,38 @@
 13. The current generation of AI products is technology-centric
 14. Models work with chat, so we ship a chat bot
 15. But should we?
+16. _Why Chatbots Are Not the Future_ by Amelia Wattenberger
+17. Text inputs have not affordances
+18. Responses are isolated
+19. "... the human is not longer in control of the outcome" AW
+20. "No man's land" AW
+21. _Language Model Sketchbook, or Why I Hate Chatbots_ by Maggie Appleton
+22. "...the lazy solution" MA
+23. _Natural Language is the Lazy User Interface_ by Austin Z. Henley
+24. "not going to revolutionize the world" AZH
+25. "all the burden on the user" AZH
+26. "What to ask, where to ask it, how to ask it..." AZH
+27. We've been through this before
+28. Terminal v. GUI
+29. When developers design, you get a textbox on a page
+30. Screenshot of ChatGPT UI
+31. A different way
+32. Human-centric design
+33. Good design is helping users accomplish goals
+34. No one's goal is to chat with an AI
+35. "A good user interface..." AZH
+36. "A great user interface..." AZH
+37. We need to support multiple modalities of interaction (AZH)
+38. Models could run in the background (MA)
+39. Models could prompt the human to think (MA)
+40. Fulfilling user goals with models
+41. AI the product vs AI the feature
+42. MKBHD
+43. AI isn't enough to make a product
+44. AI makes a feature magical
+45. Good examples
+46. GitHub Copilot
+47. Khanmigo Writing Coach
+48. Adobe Firefly
+49. Apple Intelligence
+50. Successful AI products will have human-centric design
