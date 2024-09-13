@@ -44,7 +44,31 @@ High Level:
    2. Focus on the human user and their goals
    3. Embrace multiple model types and interaction modes
 
-Slides:
+Slides v1:
+
+1. Thinking outside the bots: A Human-centric Approach to Model Interactions
+2. Sean McPherson/Pittsburgh/Software Engineer
+3. Building AI-powered learning experiences at Khan Academy
+4. ---SECTION--- Background
+5. AI vs Model
+6. Survey time
+7. How did we get here?
+8. For decades, machine learning quietly solving problems
+9. In 2022 ChatGPT bursts on the scene
+10. Gold Rush: Eveyone is an AI company now
+11. OpenAI/Microsoft/Google/Meta/Anthropic
+12. Eveyone else is using their models or APIs
+13. They all have their own chatbot
+14. Chatbots are a bad UI (for most things)
+15. ---SECTION--- The Problem: Technology-centric design
+16. Technology-centric design
+17. We have let the solution shape the problem
+18. #1 No direction/#2 No context/#3 No resolution
+19. ![Screenshots of articles referenced]
+20. #1 No direction
+21. :QUOTE: Affordance definition (DN)
+
+Slides v0:
 
 1. Thinking outside the bots: A Human-centric Approach to Model Interactions
 2. Sean McPherson/Pittsburgh/Software Engineer
@@ -57,13 +81,12 @@ Slides:
 9. Gold Rush: Eveyone is an AI company now
 10. OpenAI/Microsoft/Google/Meta/Anthropic
 11. Eveyone else is using their models or APIs
-<!-- 12. They all have their own chatbot -->
 12. Technology-centric Design
 13. The current generation of AI products is technology-centric
 14. Models work with chat, so we ship a chat bot
 15. But should we?
 16. _Why Chatbots Are Not the Future_ by Amelia Wattenberger
-17. Text inputs have not affordances
+17. Text inputs have no affordances
 18. Responses are isolated
 19. "... the human is not longer in control of the outcome" AW
 20. "No man's land" AW

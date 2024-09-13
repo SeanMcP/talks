@@ -105,7 +105,7 @@ At Khan Academy, I have been working on activities that give students AI-powered
   - With Apple Intelligence, Apple is working on their own models that run on device and "building a ChatGPT wrapper into a lot of their OS"
   - "More people in the long run are going to end up using this AI stuff as a feature more than going to a standalone thing"
   - "I found it really hard to find any examples of the other way around happening"
-- _The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed_ by James Ryseff, Brandon De Bruhl, Sydne J. Newberry. Rand. https://www.rand.org/content/dam/rand/pubs/research_reports/RRA2600/RRA2680-1/RAND_RRA2680-1.pdf
+- _The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed_ by James Ryseff, Brandon De Bruhl, Sydne J. Newberry. Rand. https://www.rand.org/pubs/research_reports/RRA2680-1.html https://www.rand.org/content/dam/rand/pubs/research_reports/RRA2600/RRA2680-1/RAND_RRA2680-1.pdf
   - Conducted interviews of "with experienced AI practitioners in both industry and academia. During these interviews, we defined the failure of an AI project as a project that was perceived to be a failure by the organization. We included both technical failures and business failures within this definition." (4)
   - Under takeaways: "Third, in some cases, AI projects fail because the organization focuses more on using the latest and greatest technology than on solving real problems for its intended users." (2)
   - Under industry recommendations:
@@ -115,3 +115,6 @@ At Khan Academy, I have been working on activities that give students AI-powered
   - "Chasing the latest and greatest advances in AI for their own sake is one of the most frequent pathways to failure." (14)
   - "...select AI projects that are both a good fit for the technology and that solve a real problem for their intended user." (14)
   - "No matter how impressive a new technology may appear, ultimately any technology—even AI—is simply a tool to be wielded rather than an end in and of itself." (14)
+- _The Design of Everyday Things_ by Don Norman
+  - "An affordance is a relationship between the properties of an object and the capabilities of the [person] that determine just how the object could possibly be used." 11
+  - "An affordance is not a property. An affordance is a relationshi. Whether an affordance exists depends upon the properties of both the object and the [person]." 11
