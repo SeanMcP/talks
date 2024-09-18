@@ -48,6 +48,7 @@ At Khan Academy, I have been working on activities that give students AI-powered
 
 - _Meet Khanmigo Writing Coach_ by Khan Academy. https://blog.khanacademy.org/meet-khanmigo-writing-coach-helping-learners-become-better-writers/
 - _Why Chatbots Are Not the Future_ by Amelia Wattenberger. https://wattenberger.com/thoughts/boo-chatbots
+  - "chatbots are not the future of interfaces."
   - Text inputs have no affordances
     - "Good tools make it clear how they should be used. And more importantly, how they should not be used."
     - "The only clue we receive is that we should type characters into the textbox. The interface looks the same as a Google search box, a login form, and a credit card field."

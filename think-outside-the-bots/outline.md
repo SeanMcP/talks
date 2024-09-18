@@ -60,13 +60,67 @@ Slides v1:
 12. Eveyone else is using their models or APIs
 13. They all have their own chatbot
 14. Chatbots are a bad UI (for most things)
-15. ---SECTION--- The Problem: Technology-centric design
-16. Technology-centric design
-17. We have let the solution shape the problem
-18. #1 No direction/#2 No context/#3 No resolution
+15. But don't take my word for it
+16. Chatbots are "the lazy solution... the obvious tip of the iceberg" (Appleton)
+17. Chatbots "are not the future of interfaces." (Wattenberger)
+18. Chatbots are not "going to revolutionize the world." (Henley)
 19. ![Screenshots of articles referenced]
-20. #1 No direction
-21. :QUOTE: Affordance definition (DN)
+20. ---SECTION--- The Problem
+21. #1 No direction/#2 No context/#3 No resolution
+22. #1 No direction
+23. "...how they should be used" (Wattenberger)
+24. "The only clue..." (Wattenberger)
+25. "Puts burden on user" (Henley)
+26. Good design communicates to the user what is possible
+27. A textbox says very little
+28. #2 No context
+29. There is no memory beyond `messages`\*
+30. The chatbot doesn't know what you're doing
+31. Users must "hack [context] into each of their questions" (Wattenberger)
+32. "It puts all the burden on the user" (Henley)
+33. ![Movie posters for _50 First Dates_ and _Groundhog Day_]
+34. #3 No resolution
+35. There is not result, no output
+36. "...iteratively and incrementally explore the problem and solution space..." (Henley)
+37. Chatbots make that difficult
+38. "Difficult to see changes" (Wattenberger)
+39. Imagine code review without inline/side-by-side diff
+40. The Real Problem: Technology-centric design
+41. We have let the solution shape the problem
+42. When you have a hammer, every problem looks like a nail
+43. ---SECTION--- The Solution
+44. #1 No direction/#2 No context/#3 No resolution
+45. #1 Target a resolution/#2 Build in context/#3 Design the direction
+46. #1 Target a resolution
+47. Every feature should have a clear output
+48. What does the user need to accomplish?
+49. #2 Build in context
+50. What information gets the user to that resolution?
+51. "feed the relevant context to the model behind the scenes and use that to preemptively suggest what I should do next." (Henley)
+52. #3 Design the direction
+53. Design with the user's goal at the forefront
+54. For a writer, a document/For a dev, an editor/For an artist, a canvas
+55. The Real Solution: Human-centered design
+56. ---SECTION--- Examples
+57. #1 Target a resolution/#2 Build in context/#3 Design the direction
+58. Khan Academy's Khanmigo
+59. Writing Coach
+60. Coeditor
+61. GitHub Copilot
+62. Adobe Firefly
+63. Apple Intelligence
+64. ---SECTION--- Takeaway
+65. Human-centric design
+66. #1 Target a resolution/#2 Build in context/#3 Design the direction
+67. Rand's _The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed_
+68. "Choose enduring problems" (Rand)
+69. "Focus on the problem, not the technology" (Rand)
+70. "No matter how impressive a new technology may appear, ultimately any technology—even AI—is simply a tool to be wielded rather than an end in and of itself." (Rand)
+71. MKBHD
+72. "AI is a feature, not a product"
+73. Chase the problem, not the solution
+74. Focus on the human user and their goals
+75. Embrace multiple modal types and interaction modes
 
 Slides v0:
 
