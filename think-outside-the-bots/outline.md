@@ -44,6 +44,8 @@ High Level:
    2. Focus on the human user and their goals
    3. Embrace multiple model types and interaction modes
 
+Slide v2: NOW IN GOOGLE SLIDES
+
 Slides v1:
 
 1. Thinking outside the bots: A Human-centric Approach to Model Interactions
