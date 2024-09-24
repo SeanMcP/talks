@@ -116,6 +116,15 @@ At Khan Academy, I have been working on activities that give students AI-powered
   - "Chasing the latest and greatest advances in AI for their own sake is one of the most frequent pathways to failure." (14)
   - "...select AI projects that are both a good fit for the technology and that solve a real problem for their intended user." (14)
   - "No matter how impressive a new technology may appear, ultimately any technology—even AI—is simply a tool to be wielded rather than an end in and of itself." (14)
-- _The Design of Everyday Things_ by Don Norman
+- _The Design of Everyday Things: Revised & Expanded Edition_ by Don Norman. Basic Books. 2013.
   - "An affordance is a relationship between the properties of an object and the capabilities of the [person] that determine just how the object could possibly be used." 11
   - "An affordance is not a property. An affordance is a relationshi. Whether an affordance exists depends upon the properties of both the object and the [person]." 11
+  - "Each new development seems to repeat the mistakes of the earlier ones; each new field requires time before it, too, adopts the principles of good design." 8
+  - "And each new invention of technology or interaction technique requires experimentation and studey before the principles of good design can be fully integrated into practice." 8
+  - "The solution is human-centered design (HCD), an approach that puts human needs, capabilities, and behavior first, and then designs to accommodate those needs, capabilities, and ways of behaving." 8
+  - "Good design starts with an understanding of psychology and technology." 8
+  - "Good design requires good communication, especially from machine to person, indicating what actions are possible, what ishappening, and what is about to happen." 8
+  - Human-centered design: "The process that ensures that the designs match the needs and capabilities of the people for whom they are intended" 9
+  - "Human-centered design is a design philosophy. It means starting with a good understanding of people and the needs that they design is intended to meet." 9
+  - "Human-centered design (HCD) is the process of ensuring that people's needs are met, that the resulting product is understandable and usable, that it accomplishes the desired tasks, and that the experience is positive and enjoyable." 219
+  - Human-centered design has two emphases: "solving the right problem, and doing so in a way that meets human needs and capabilities" 219
